@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlserver://testdbjan.database.windows.net:1433;database=AutoScout23;user=jan@testdbjan;password={fun4databasepassword!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+
+        <!--<property name="connection.username"/> -->
+        <!--<property name="connection.password"/> -->
+
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Will print out all SQL to console -->
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property> <!--create or update-->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
