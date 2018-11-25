@@ -1,11 +1,12 @@
-package dal;
+package test;
 
 import dal.entities.Car;
+import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateSessionFactory {
+public class RetrieveCreatedCar {
 
     public static void main(String[] args){
 
@@ -21,9 +22,9 @@ public class HibernateSessionFactory {
         try {
             // Use the session object to save Java object to database
 
-            // Create a new Car object
-            System.out.println("Creating new car");
-            Car newCar = new Car("Ferrari", "F430 Spider", 23600, 95000);
+            // Create 3 new Car object
+            System.out.println("Create new cars");
+            Car newCar1 = new Car("Seat", "Ibiza", 135900, 4500);
 
             // Start a transaction
             System.out.println("Starting transaction");
@@ -31,13 +32,27 @@ public class HibernateSessionFactory {
 
             // Save the Car object
             System.out.println("Saving new object");
-            session.save(newCar);
+            session.save(newCar1);
 
             // Commit transaction
             System.out.println("Commiting transaction");
             session.getTransaction().commit();
 
-            System.out.println("Done: " + newCar.toString());
+            // Retrieve the id of the new car: primary key
+            int id = newCar1.getId();
+
+            // Get new session and start transaction
+            session = sessionFactory.getCurrentSession();
+            session.beginTransaction();
+
+            // Retrieve car based on the id: primary key
+            System.out.println("Getting car with id: " + id);
+            Car retrievedCar = session.get(Car.class, id);
+
+            // Commit the transaction
+            session.getTransaction().commit();
+
+            System.out.println(retrievedCar.toString());
         }
         finally {
             sessionFactory.close();

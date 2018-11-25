@@ -1,18 +1,15 @@
 package dal.entities;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "Car")
 public class Car {
 
-//    @Id
-//    @Column(name = "id")
-//    private int id;
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Make sure it auto increments the 'id'
+    @Column(name = "id")
     private int id;
 
     @Column(name = "make")
@@ -26,6 +23,35 @@ public class Car {
 
     @Column(name = "price")
     private int price;
+
+    @PrePersist
+    protected void onCreate() {
+        created = new Date();
+        testDate = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updated = new Date();
+    }
+
+    @Column(name = "date_added")
+    private Date created;
+
+    @Column(name = "date_updated")
+    private Date updated;
+
+    public Date getTestDate() {
+        return testDate;
+    }
+
+    public void setTestDate(Date testDate) {
+        this.testDate = testDate;
+    }
+
+    @Column(name = "test_date")
+    private Date testDate;
+
 
     public Car(){
 
@@ -78,6 +104,18 @@ public class Car {
         this.price = price;
     }
 
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -86,6 +124,14 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", mileage=" + mileage +
                 ", price=" + price +
+                ", created=" + created +
+                ", updated=" + updated +
+                ", testDate=" + testDate +
                 '}';
     }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
 }

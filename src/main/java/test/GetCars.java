@@ -1,11 +1,13 @@
-package dal;
+package test;
 
 import dal.entities.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateSessionFactory {
+import java.util.List;
+
+public class GetCars {
 
     public static void main(String[] args){
 
@@ -21,23 +23,25 @@ public class HibernateSessionFactory {
         try {
             // Use the session object to save Java object to database
 
-            // Create a new Car object
-            System.out.println("Creating new car");
-            Car newCar = new Car("Ferrari", "F430 Spider", 23600, 95000);
-
             // Start a transaction
             System.out.println("Starting transaction");
             session.beginTransaction();
 
-            // Save the Car object
-            System.out.println("Saving new object");
-            session.save(newCar);
+            // Query Cars
+            List cars = session.createQuery("FROM dal.entities.Car").getResultList();
 
-            // Commit transaction
-            System.out.println("Commiting transaction");
+            // Display all Cars
+            for (Object car : cars){
+                System.out.println(car);
+            }
+
+            List ferraris = session.createQuery("FROM dal.entities.Car AS car WHERE car.make = 'Ferrari'").getResultList();
+            for (Object ferrari : ferraris){
+                System.out.println(ferrari);
+            }
+
+            // Commit the transaction
             session.getTransaction().commit();
-
-            System.out.println("Done: " + newCar.toString());
         }
         finally {
             sessionFactory.close();
