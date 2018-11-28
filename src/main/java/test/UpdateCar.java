@@ -43,7 +43,7 @@ public class UpdateCar {
             session = sessionFactory.getCurrentSession();
             session.beginTransaction();
 
-            session.createQuery("UPDATE dal.entities.Car SET test_date = '2018-11-25'")
+            session.createQuery("UPDATE dal.entities.Car SET mileage = '123'")
                     .executeUpdate();
 
             session.getTransaction().commit();

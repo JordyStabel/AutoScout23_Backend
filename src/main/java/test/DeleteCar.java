@@ -30,23 +30,11 @@ public class DeleteCar {
             // Get a car with correct id
             Car car = session.get(Car.class, carId);
 
-            // Update create data
-            Random random = new Random();
-            car.setPrice((random.nextInt(50000) * random.nextInt(10)));
-            car.setMileage((random.nextInt(10000) * random.nextInt(10)));
-
+            // Delete car
+            //session.delete(car);
+            session.createQuery("DELETE FROM dal.entities.Car WHERE id = '2'").executeUpdate();
             // Commit the transaction
             session.getTransaction().commit();
-
-            session = sessionFactory.getCurrentSession();
-            session.beginTransaction();
-
-            session.createQuery("UPDATE dal.entities.Car SET test_date = '2018-11-25'")
-                    .executeUpdate();
-
-            session.getTransaction().commit();
-
-            session.close();
         }
         finally {
             sessionFactory.close();

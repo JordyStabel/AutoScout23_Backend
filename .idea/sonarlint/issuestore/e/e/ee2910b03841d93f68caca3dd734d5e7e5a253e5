@@ -1,14 +1,14 @@
 
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(øúşÓ8ø¬ÇÜô,
-…squid:UselessImportCheck"URemove this unused import 'net.bytebuddy.implementation.bind.MethodDelegationBinder'.(ÄÍ¥şÿÿÿÿ8íÂŞİô,
 [
 squid:S106""9Replace this use of System.out or System.err by a logger.(Æáµùÿÿÿÿ8ø¬ÇÜô,
 V
-squid:S106&"9Replace this use of System.out or System.err by a logger.(Ñ¬¾‹8ø¬ÇÜô,
+squid:S106"9Replace this use of System.out or System.err by a logger.(øúşÓ8ø¬ÇÜô,
 [
 squid:S1061"9Replace this use of System.out or System.err by a logger.(ç×Ú¼úÿÿÿÿ8íÂŞİô,
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(¶ªò–ıÿÿÿÿ8ø¬ÇÜô,
+V
+squid:S106&"9Replace this use of System.out or System.err by a logger.(Ñ¬¾‹8ø¬ÇÜô,
 [
 squid:S1067"9Replace this use of System.out or System.err by a logger.(Ù«‘¥øÿÿÿÿ8èĞâİô,
+…squid:UselessImportCheck"URemove this unused import 'net.bytebuddy.implementation.bind.MethodDelegationBinder'.(ÄÍ¥şÿÿÿÿ8íÂŞİô,

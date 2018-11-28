@@ -27,7 +27,6 @@ public class Car {
     @PrePersist
     protected void onCreate() {
         created = new Date();
-        testDate = new Date();
     }
 
     @PreUpdate
@@ -40,18 +39,6 @@ public class Car {
 
     @Column(name = "date_updated")
     private Date updated;
-
-    public Date getTestDate() {
-        return testDate;
-    }
-
-    public void setTestDate(Date testDate) {
-        this.testDate = testDate;
-    }
-
-    @Column(name = "test_date")
-    private Date testDate;
-
 
     public Car(){
 
@@ -126,12 +113,10 @@ public class Car {
                 ", price=" + price +
                 ", created=" + created +
                 ", updated=" + updated +
-                ", testDate=" + testDate +
                 '}';
     }
 
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
-
 }
