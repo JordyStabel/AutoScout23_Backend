@@ -17,3 +17,7 @@ Q
 !src/main/java/test/DeleteCar.java,7\c\7c7d1896eaa95ed58b1e7979c71bd4c257b7c951
 ^
 .src/main/java/dal/HibernateSessionFactory.java,b\5\b5674c6f61fd3124daca1038d8e513089d6d07d1
+Y
+)src/main/resources/application.properties,0\6\06f65155ec73600b9fc5c4dc2883d4bb84d8e284
+L
+src/main/java/test/REST.java,9\6\96d0798d7c6e0acbe7d858f461a24ba58273aa95
