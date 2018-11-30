@@ -1,0 +1,7 @@
+
+V
+squid:S106!"9Replace this use of System.out or System.err by a logger.(øúşÓ8„êüüõ,
+[squid:UselessImportCheck	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¿ÖÂûõ,
+nsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(àÒˆ­ûÿÿÿÿ8¼ªøüõ,
+[
+squid:S106R"9Replace this use of System.out or System.err by a logger.(”¹¤ôıÿÿÿÿ8ˆÁóüõ,

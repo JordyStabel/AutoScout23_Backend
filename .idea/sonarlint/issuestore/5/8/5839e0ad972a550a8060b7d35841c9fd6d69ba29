@@ -1,0 +1,7 @@
+
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ä¹»Žüÿÿÿÿ8¿ÖÂûõ,
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¼¥¼ä8¿ÖÂûõ,
+ƒsquid:UselessImportCheck"SRemove this unused import 'org.springframework.web.bind.annotation.RestController'.(±íþ¡þÿÿÿÿ8ÞåÎûõ,
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¿ÖÂûõ,
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(¶Àèýýÿÿÿÿ8¿ÖÂûõ,
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¿ÖÂûõ,

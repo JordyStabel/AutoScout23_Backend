@@ -1,0 +1,50 @@
+package models;
+
+import dal.entities.Car;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
+
+public class DBEntryTest {
+
+    private Car car;
+
+    @Before
+    public void setUp() {
+        car = new Car("BMW", "M5 E92", 25600, 32000);
+    }
+
+    @Test
+    public void addEntry() {
+
+        SessionFactory sessionFactory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Car.class)
+                .buildSessionFactory();
+
+        Session session = sessionFactory.getCurrentSession();
+
+        int numberOfCarsBefore;
+        int numberOfCarsAfter;
+
+        try {
+            session.beginTransaction();
+            List cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            numberOfCarsBefore = cars.size();
+            session.save(car);
+            cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            session.getTransaction().commit();
+            numberOfCarsAfter = cars.size();
+        }
+        finally {
+            sessionFactory.close();
+            session.close();
+        }
+        Assert.assertEquals(numberOfCarsAfter, numberOfCarsBefore + 1);
+    }
+}

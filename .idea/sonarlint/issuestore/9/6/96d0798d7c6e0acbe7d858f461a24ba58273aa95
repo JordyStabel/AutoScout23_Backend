@@ -1,4 +1,4 @@
 
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µôßö8Ú—ÙÓõ,
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½©±¤ûÿÿÿÿ8Ï½ÙÓõ,
-msquid:CallToDeprecatedMethod"?Remove this use of "WebMvcConfigurerAdapter"; it is deprecated.(¯¤¢H8Ï½ÙÓõ,
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½©±¤ûÿÿÿÿ8ËÔÁûõ,
+msquid:CallToDeprecatedMethod#"?Remove this use of "WebMvcConfigurerAdapter"; it is deprecated.(¯¤¢H8ËÔÁûõ,
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µôßö8ËÔÁûõ,
