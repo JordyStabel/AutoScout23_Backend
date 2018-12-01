@@ -1,13 +1,13 @@
-package test;
+package autoscoutbackend.test;
 
-import dal.entities.Car;
+import autoscoutbackend.dal.entities.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
+import java.util.Random;
 
-public class GetCars {
+public class UpdateCar {
 
     public static void main(String[] args){
 
@@ -22,26 +22,31 @@ public class GetCars {
 
         try {
             // Use the session object to save Java object to database
+            int carId = 1;
 
             // Start a transaction
-            System.out.println("Starting transaction");
             session.beginTransaction();
 
-            // Query Cars
-            List cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            // Get a car with correct id
+            Car car = session.get(Car.class, carId);
 
-            // Display all Cars
-            for (Object car : cars){
-                System.out.println(car);
-            }
-
-            List ferraris = session.createQuery("FROM dal.entities.Car AS car WHERE car.make = 'Ferrari'").getResultList();
-            for (Object ferrari : ferraris){
-                System.out.println(ferrari);
-            }
+            // Update create data
+            Random random = new Random();
+            car.setPrice((random.nextInt(50000) * random.nextInt(10)));
+            car.setMileage((random.nextInt(10000) * random.nextInt(10)));
 
             // Commit the transaction
             session.getTransaction().commit();
+
+            session = sessionFactory.getCurrentSession();
+            session.beginTransaction();
+
+            session.createQuery("UPDATE dal.entities.Car SET mileage = '123'")
+                    .executeUpdate();
+
+            session.getTransaction().commit();
+
+            session.close();
         }
         finally {
             sessionFactory.close();

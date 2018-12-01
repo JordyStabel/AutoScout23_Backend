@@ -1,4 +1,4 @@
-package dal.entities;
+package autoscoutbackend.dal.entities;
 
 import javax.persistence.*;
 import java.util.Date;

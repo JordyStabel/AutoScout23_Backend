@@ -1,6 +1,7 @@
 package models;
 
-import dal.entities.Car;
+import autoscoutbackend.dal.entities.Car;
+import autoscoutbackend.dal.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -27,17 +28,17 @@ public class DBEntryTest {
                 .addAnnotatedClass(Car.class)
                 .buildSessionFactory();
 
-        Session session = sessionFactory.getCurrentSession();
+        Session session = HibernateSessionFactory.getSessionFactory().getCurrentSession();
 
         int numberOfCarsBefore;
         int numberOfCarsAfter;
 
         try {
             session.beginTransaction();
-            List cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            List cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
             numberOfCarsBefore = cars.size();
             session.save(car);
-            cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
             session.getTransaction().commit();
             numberOfCarsAfter = cars.size();
         }

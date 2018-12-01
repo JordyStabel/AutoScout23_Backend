@@ -1,11 +1,11 @@
-package dal;
+package autoscoutbackend.test;
 
-import dal.entities.Car;
+import autoscoutbackend.dal.entities.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateSessionFactory {
+public class DeleteCar {
 
     public static void main(String[] args){
 
@@ -20,24 +20,19 @@ public class HibernateSessionFactory {
 
         try {
             // Use the session object to save Java object to database
-
-            // Create a new Car object
-            System.out.println("Creating new car");
-            Car newCar = new Car("Ferrari", "F430 Spider", 23600, 95000);
+            int carId = 1;
 
             // Start a transaction
-            System.out.println("Starting transaction");
             session.beginTransaction();
 
-            // Save the Car object
-            System.out.println("Saving new object");
-            session.save(newCar);
+            // Get a car with correct id
+            Car car = session.get(Car.class, carId);
 
-            // Commit transaction
-            System.out.println("Commiting transaction");
+            // Delete car
+            //session.delete(car);
+            session.createQuery("DELETE FROM dal.entities.Car WHERE id = '2'").executeUpdate();
+            // Commit the transaction
             session.getTransaction().commit();
-
-            System.out.println("Done: " + newCar.toString());
         }
         finally {
             sessionFactory.close();

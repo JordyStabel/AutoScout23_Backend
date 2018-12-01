@@ -1,15 +1,10 @@
-package test;
-
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
+package autoscoutbackend.test;
 
 public class CarResourse {
     private String model;
 
     public CarResourse() {
-        this.model = "This is a test.";
+        this.model = "This is a autoscoutbackend.test.";
     }
 
     public String getModel() {

@@ -1,7 +1,6 @@
-package test;
+package autoscoutbackend.test;
 
-import dal.entities.Car;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
+import autoscoutbackend.dal.entities.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

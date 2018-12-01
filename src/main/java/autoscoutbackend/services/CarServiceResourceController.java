@@ -1,16 +1,18 @@
-package test;
+package autoscoutbackend.services;
 
-import dal.entities.Car;
+import autoscoutbackend.dal.entities.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
-public class ResourceController {
+public class CarServiceResourceController {
 
     @RequestMapping("/cars")
     @CrossOrigin(origins = "http://localhost:3000")
@@ -30,7 +32,6 @@ public class ResourceController {
             // Use the session object to save Java object to database
 
             // Start a transaction
-            System.out.println("Starting transaction");
             session.beginTransaction();
 
             // Query Cars
@@ -45,10 +46,18 @@ public class ResourceController {
         return cars;
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/car")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public String getTimeMessage(){
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    @RequestMapping("/autoscoutbackend/test")
     @CrossOrigin(origins = "http://localhost:3000")
     public String runTest(){
-        return "This is a test, returning a string....this.";
+        return "This is a autoscoutbackend.test, returning a string....this.";
     }
 
     @RequestMapping(value = "/new") //, method = RequestMethod.POST)

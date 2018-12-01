@@ -25,3 +25,7 @@ S
 #src/main/java/test/CarResourse.java,5\8\5839e0ad972a550a8060b7d35841c9fd6d69ba29
 Z
 *src/main/java/test/ResourceController.java,4\f\4f2140a47388cea9426d4b35282f0bddd80d2944
+U
+%src/test/java/models/DBEntryTest.java,c\9\c9bfc3d2c89f0af3ced93ca8ba152e6338430f02
+;
+.travis.yml,d\e\dea01dd89a3b602828e630677fde5d77c06441c8
