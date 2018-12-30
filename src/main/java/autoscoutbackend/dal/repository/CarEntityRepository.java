@@ -1,4 +1,10 @@
 package autoscoutbackend.dal.repository;
 
-public class CarEntityRepository {
+import autoscoutbackend.models.Car;
+
+public class CarEntityRepository extends AbstractRepository<Car, Integer> {
+    @Override
+    public Class<Car> getDomainClass() {
+        return Car.class;
+    }
 }

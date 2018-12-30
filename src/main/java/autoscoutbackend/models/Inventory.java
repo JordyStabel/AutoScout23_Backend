@@ -1,4 +1,4 @@
-package autoscoutbackend.dal.entities;
+package autoscoutbackend.models;
 
 import java.util.ArrayList;
 import java.util.List;

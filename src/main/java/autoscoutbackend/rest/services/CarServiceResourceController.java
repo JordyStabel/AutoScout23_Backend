@@ -1,7 +1,8 @@
-package autoscoutbackend.services;
+package autoscoutbackend.rest.services;
 
 import autoscoutbackend.dal.HibernateSessionFactory;
-import autoscoutbackend.dal.entities.*;
+import autoscoutbackend.models.Car;
+import autoscoutbackend.models.Inventory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -16,7 +17,7 @@ import java.util.List;
 public class CarServiceResourceController {
 
     @RequestMapping("/cars")
-    @CrossOrigin(origins = "http://localhost:3001")
+    @CrossOrigin(origins = "http://localhost:3000")
     public Inventory getAllCars() {
 
         Inventory inventory = new Inventory();
@@ -30,7 +31,7 @@ public class CarServiceResourceController {
             session.beginTransaction();
 
             // Query Cars
-            List cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
+            List cars = session.createQuery("FROM autoscoutbackend.models.Car").getResultList();
 
             for (Object car : cars){
                 inventory.addCar((Car) car);
@@ -46,7 +47,7 @@ public class CarServiceResourceController {
     }
 
     @RequestMapping("/car")
-    @CrossOrigin(origins = "http://localhost:3001")
+    @CrossOrigin(origins = "http://localhost:3000")
     public String getTimeMessage(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
         Date date = new Date();
@@ -54,7 +55,7 @@ public class CarServiceResourceController {
     }
 
     @RequestMapping("/autoscoutbackend/test")
-    @CrossOrigin(origins = "http://localhost:3001")
+    @CrossOrigin(origins = "http://localhost:3000")
     public String runTest(){
         return "This is a autoscoutbackend.test, returning a string....this.";
     }
@@ -76,7 +77,7 @@ public class CarServiceResourceController {
             // Use the session object to save Java object to database
 
             // Create a new Car object
-            Car newCar = new Car("Porsche", "918 Spyder", 2600, 1995000);
+            Car newCar = new Car("Porsche", "918 Spyder", 2600, 1995000, "https://prod.pictures.autoscout24.net/listing-images/5015c0d0-c0b0-4907-a9c6-c301a388dd41_ffcfb107-c830-4f09-9bc6-66a9fa05e664.jpg/640x480.jpg");
 
             // Start a transaction
             session.beginTransaction();

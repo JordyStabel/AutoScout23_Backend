@@ -1,6 +1,6 @@
 package autoscoutbackend.dal;
 
-import autoscoutbackend.dal.entities.Car;
+import autoscoutbackend.models.Car;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

@@ -1,10 +1,8 @@
 package models;
 
-import autoscoutbackend.dal.entities.Car;
+import autoscoutbackend.models.Car;
 import autoscoutbackend.dal.*;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +15,7 @@ public class DBEntryTest {
 
     @Before
     public void setUp() {
-        car = new Car("BMW", "M5 E92", 25600, 32000);
+        car = new Car("BMW", "M5 E92", 25600, 32000, "https://hips.hearstapps.com/hmg-prod/images/2018-bmw-m2-competition-99gallery-1526572314.jpg");
     }
 
     @Test
@@ -29,10 +27,10 @@ public class DBEntryTest {
 
         try {
             session.beginTransaction();
-            List cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
+            List cars = session.createQuery("FROM autoscoutbackend.models.Car").getResultList();
             numberOfCarsBefore = cars.size();
             session.save(car);
-            cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
+            cars = session.createQuery("FROM autoscoutbackend.models.Car").getResultList();
             session.getTransaction().commit();
             numberOfCarsAfter = cars.size();
         }

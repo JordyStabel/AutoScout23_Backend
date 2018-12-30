@@ -22,6 +22,6 @@
         <property name="hbm2ddl.auto">update</property> <!--create or update-->
 
         <!-- The mapping information of entities -->
-        <!--<mapping class="autoscoutbackend.dal.entities.Car"/>-->
+        <mapping class="autoscoutbackend.models.Car"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package autoscoutbackend.dal.entities;
+package autoscoutbackend.models;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -25,7 +25,7 @@ public class Car {
     private int price;
 
     @Column(name = "image")
-    private String imageUrl;
+    private String image;
 
     @PrePersist
     protected void onCreate() {
@@ -47,12 +47,19 @@ public class Car {
 
     }
 
-    public Car(String make, String model, int mileage, int price, String imageUrl) {
+    public Car(String make, String model, int mileage, int price, String image) {
         this.make = make;
         this.model = model;
         this.mileage = mileage;
         this.price = price;
-        this.imageUrl = imageUrl;
+        this.image = image;
+    }
+
+    public Car(String make, String model, int mileage, int price) {
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
+        this.price = price;
     }
 
     public int getId() {
@@ -107,12 +114,12 @@ public class Car {
         return updated;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImage() {
+        return image;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override
@@ -123,7 +130,7 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", mileage=" + mileage +
                 ", price=" + price +
-                ", imageUrl='" + imageUrl + '\'' +
+                ", image='" + image + '\'' +
                 ", created=" + created +
                 ", updated=" + updated +
                 '}';

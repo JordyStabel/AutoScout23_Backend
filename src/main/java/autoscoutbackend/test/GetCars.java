@@ -1,6 +1,6 @@
 package autoscoutbackend.test;
 
-import autoscoutbackend.dal.entities.Car;
+import autoscoutbackend.models.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -35,7 +35,7 @@ public class GetCars {
                 System.out.println(car);
             }
 
-            List ferraris = session.createQuery("FROM dal.entities.Car AS car WHERE car.make = 'Ferrari'").getResultList();
+            List ferraris = session.createQuery("FROM dal.entities.Car AS car WHERE car.make = 'Porsche'").getResultList();
             for (Object ferrari : ferraris){
                 System.out.println(ferrari);
             }
