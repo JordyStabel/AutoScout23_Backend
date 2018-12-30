@@ -1,6 +1,7 @@
 package autoscoutbackend.services;
 
-import autoscoutbackend.dal.entities.Car;
+import autoscoutbackend.dal.HibernateSessionFactory;
+import autoscoutbackend.dal.entities.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,18 +16,13 @@ import java.util.List;
 public class CarServiceResourceController {
 
     @RequestMapping("/cars")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public List<Car> getCar() {
-        List cars = null;
+    @CrossOrigin(origins = "http://localhost:3001")
+    public Inventory getAllCars() {
 
-        // Create new session factory
-        SessionFactory sessionFactory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Car.class)
-                .buildSessionFactory();
+        Inventory inventory = new Inventory();
 
-        // Create session
-        Session session = sessionFactory.getCurrentSession();
+
+        Session session = HibernateSessionFactory.getSessionFactory().getCurrentSession();
 
         try {
             // Use the session object to save Java object to database
@@ -35,19 +31,23 @@ public class CarServiceResourceController {
             session.beginTransaction();
 
             // Query Cars
-            cars = session.createQuery("FROM dal.entities.Car").getResultList();
+            List cars = session.createQuery("FROM autoscoutbackend.dal.entities.Car").getResultList();
 
-            sessionFactory.close();
+            for (Object car : cars){
+                inventory.addCar((Car) car);
+            }
+
+            session.close();
         }
         finally {
-            sessionFactory.close();
+            session.close();
         }
 
-        return cars;
+        return inventory;
     }
 
     @RequestMapping("/car")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3001")
     public String getTimeMessage(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
         Date date = new Date();
@@ -55,13 +55,13 @@ public class CarServiceResourceController {
     }
 
     @RequestMapping("/autoscoutbackend/test")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3001")
     public String runTest(){
         return "This is a autoscoutbackend.test, returning a string....this.";
     }
 
     @RequestMapping(value = "/new") //, method = RequestMethod.POST)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3001")
     public void newproduct(){//@RequestBody String json) {
 
         // Create new session factory

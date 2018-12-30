@@ -1,0 +1,12 @@
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ÷“üùÿÿÿÿ
+N
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñáÉ*
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(é¸Óó
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ñæ˜ÿÿÿÿÿ
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(´øÞ¾ùÿÿÿÿ
+asquid:S2259""JA "NullPointerException" could be thrown; "myConnection" is nullable here.(´¢åæ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148$"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

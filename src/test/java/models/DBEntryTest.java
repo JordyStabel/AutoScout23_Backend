@@ -22,12 +22,6 @@ public class DBEntryTest {
 
     @Test
     public void addEntry() {
-
-        SessionFactory sessionFactory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Car.class)
-                .buildSessionFactory();
-
         Session session = HibernateSessionFactory.getSessionFactory().getCurrentSession();
 
         int numberOfCarsBefore;
@@ -43,7 +37,6 @@ public class DBEntryTest {
             numberOfCarsAfter = cars.size();
         }
         finally {
-            sessionFactory.close();
             session.close();
         }
         Assert.assertEquals(numberOfCarsAfter, numberOfCarsBefore + 1);
