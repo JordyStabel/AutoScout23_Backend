@@ -1,0 +1,7 @@
+
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8Âı¸şÿ,
+esquid:UselessImportCheck":Remove this unused import 'autoscoutbackend.test.GetCars'.(Îû”û8Í¢½şÿ,
+msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8Í¢½şÿ,
+[squid:UselessImportCheck	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ö²ÿÿ,
+csquid:UselessImportCheck"3Remove this unused import 'org.hibernate.Criteria'.(öÏ¨ÿÿÿÿÿ8®ÁÚşÿ,
+msquid:S00100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8ŒÎÀşÿ,

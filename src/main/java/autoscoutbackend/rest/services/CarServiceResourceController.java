@@ -1,13 +1,15 @@
 package autoscoutbackend.rest.services;
 
-import autoscoutbackend.dal.HibernateSessionFactory;
 import autoscoutbackend.models.Car;
 import autoscoutbackend.models.Inventory;
+import autoscoutbackend.rest.handler.CarHandler;
+import com.google.gson.Gson;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.Response;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,33 +18,18 @@ import java.util.List;
 @RestController
 public class CarServiceResourceController {
 
-    @RequestMapping("/cars")
+    private CarHandler carHandler = new CarHandler();
+
+    @RequestMapping("/getAllCars")
     @CrossOrigin(origins = "http://localhost:3000")
     public Inventory getAllCars() {
-
         Inventory inventory = new Inventory();
 
-        Session session = HibernateSessionFactory.getSessionFactory().getCurrentSession();
+        List cars = carHandler.GetAllCars();
 
-        try {
-            // Use the session object to save Java object to database
-
-            // Start a transaction
-            session.beginTransaction();
-
-            // Query Cars
-            List cars = session.createQuery("FROM autoscoutbackend.models.Car").getResultList();
-
-            for (Object car : cars){
-                inventory.addCar((Car) car);
-            }
-
-            session.close();
+        for (Object car : cars){
+            inventory.addCar((Car) car);
         }
-        finally {
-            session.close();
-        }
-
         return inventory;
     }
 
@@ -54,47 +41,16 @@ public class CarServiceResourceController {
         return dateFormat.format(date);
     }
 
-    @RequestMapping("/autoscoutbackend/test")
+    @GetMapping("/autoscoutbackend/test")
     @CrossOrigin(origins = "http://localhost:3000")
     public String runTest(){
         return "This is a autoscoutbackend.test, returning a string....this.";
     }
 
-    @RequestMapping(value = "/new") //, method = RequestMethod.POST)
-    @CrossOrigin(origins = "http://localhost:3001")
-    public void newproduct(){//@RequestBody String json) {
-
-        // Create new session factory
-        SessionFactory sessionFactory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Car.class)
-                .buildSessionFactory();
-
-        // Create session
-        Session session = sessionFactory.getCurrentSession();
-
-        try {
-            // Use the session object to save Java object to database
-
-            // Create a new Car object
-            Car newCar = new Car("Porsche", "918 Spyder", 2600, 1995000, "https://prod.pictures.autoscout24.net/listing-images/5015c0d0-c0b0-4907-a9c6-c301a388dd41_ffcfb107-c830-4f09-9bc6-66a9fa05e664.jpg/640x480.jpg");
-
-            // Start a transaction
-            session.beginTransaction();
-
-            // Save the Car object
-            session.save(newCar);
-
-            // Commit transaction
-            session.getTransaction().commit();
-
-            System.out.println("Done: " + newCar.toString());
-
-            sessionFactory.close();
-        }
-        finally {
-            sessionFactory.close();
-        }
+    @PostMapping(value = "/submitNewCar")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public void submitNewCar(@RequestBody Car car){
+        carHandler.SubmitCar(car);
     }
 }
 

@@ -20,7 +20,7 @@ public class HibernateSessionFactory {
     private static SessionFactory buildNewSessionFactory(){
         return new Configuration()
                 .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Car.class)
+                //.addAnnotatedClass(Car.class)
                 .buildSessionFactory();
     }
 }

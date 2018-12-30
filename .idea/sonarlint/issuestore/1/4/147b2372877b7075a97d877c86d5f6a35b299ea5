@@ -1,2 +1,3 @@
 
-msquid:CallToDeprecatedMethod"?Remove this use of "WebMvcConfigurerAdapter"; it is deprecated.(¯¤¢H8ÿžðøÿ,
+_squid:UselessImportCheck"4Remove this unused import 'java.util.logging.Level'.(…µÛ¶8¾¼‡þÿ,
+msquid:CallToDeprecatedMethod"?Remove this use of "WebMvcConfigurerAdapter"; it is deprecated.(¯¤¢H8¾¼‡þÿ,

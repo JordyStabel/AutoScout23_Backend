@@ -1,0 +1,9 @@
+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8Çø™ûÿ,
+fsquid:UselessImportCheck"=Remove this unused import 'org.hibernate.HibernateException'.(™òı²8Ã¿ˆüÿ,
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤€õúÿ,
+asquid:UselessImportCheck"3Remove this unused import 'org.hibernate.Criteria'.(öÏ¨ÿÿÿÿÿ8€å”üÿ,
+esquid:S00119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(èÌÉ8¤€õúÿ,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8ö¹Úûÿ,

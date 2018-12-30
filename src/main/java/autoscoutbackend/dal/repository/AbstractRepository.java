@@ -1,11 +1,15 @@
 package autoscoutbackend.dal.repository;
 
 import autoscoutbackend.dal.HibernateSessionFactory;
+import autoscoutbackend.models.Car;
 import org.hibernate.Criteria;
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,7 +26,7 @@ public abstract class AbstractRepository<T, Id extends Serializable> implements 
     }
 
     @Override
-    public <S extends T> S add(S entity) {
+    public <S extends T> S save(S entity) {
 
         if (entity == null) {
             throw new IllegalArgumentException(entityIsNull);
@@ -50,7 +54,7 @@ public abstract class AbstractRepository<T, Id extends Serializable> implements 
 
     @Override
     @Transactional
-    public <S extends T> List<S> add(Iterable<S> entities) {
+    public <S extends T> List<S> save(Iterable<S> entities) {
 
         if (entities == null) {
             throw new IllegalArgumentException(entityIsNull);
@@ -106,22 +110,15 @@ public abstract class AbstractRepository<T, Id extends Serializable> implements 
     }
 
     @Override
-    public List<T> findAll(T type){
+    public List<T> findAll(){
         Session session = currentSession();
-
-        List<T> entities;
-
-        try {
-            session.beginTransaction();
-            Class<T> classType = getDomainClass();
-            entities = session.createQuery("FROM " + classType).getResultList();
-            session.getTransaction().commit();
-        }
-        finally {
-            session.close();
-        }
-
-        return entities;
+        Class<T> classType = getDomainClass();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> criteria = builder.createQuery(classType);
+        Root<T> rootEntry = criteria.from(classType);
+        CriteriaQuery<T> all = criteria.select(rootEntry);
+        TypedQuery<T> allQuery = session.createQuery(all);
+        return allQuery.getResultList();
     }
 
     @Override

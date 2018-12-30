@@ -18,10 +18,10 @@ public interface IRepository<T, Id extends Serializable> {
 
     T findOne(Id id);
 
-    List<T> findAll(T type);
+    List<T> findAll();
 
-    <S extends T> S add(S entity);
+    <S extends T> S save(S entity);
 
     @Transactional
-    <S extends T> List<S> add(Iterable<S> entities);
+    <S extends T> List<S> save(Iterable<S> entities);
 }
