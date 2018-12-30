@@ -20,5 +20,8 @@
 
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property> <!--create or update-->
+
+        <!-- The mapping information of entities -->
+        <!--<mapping class="autoscoutbackend.dal.entities.Car"/>-->
     </session-factory>
 </hibernate-configuration>

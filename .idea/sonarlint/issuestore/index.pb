@@ -27,3 +27,7 @@ b
 2src/main/java/autoscoutbackend/test/DeleteCar.java,8\3\838d3d4d367309060353ee4efcc15a421d3c54aa
 d
 4src/main/java/autoscoutbackend/dal/entities/Car.java,9\1\91d68ede14e7379bd062864cb8b326020ae13c47
+d
+4src/main/java/autoscoutbackend/test/CarResourse.java,e\8\e8a118a870e5766f05824b4f9332d335602f7316
+b
+2src/main/java/autoscoutbackend/test/UpdateCar.java,a\2\a20c8d6a8f4df9cd3c92d98838ba7fdbdb720a08

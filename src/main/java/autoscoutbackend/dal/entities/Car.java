@@ -24,6 +24,9 @@ public class Car {
     @Column(name = "price")
     private int price;
 
+    @Column(name = "image")
+    private String imageUrl;
+
     @PrePersist
     protected void onCreate() {
         created = new Date();
@@ -44,11 +47,12 @@ public class Car {
 
     }
 
-    public Car(String make, String model, int mileage, int price) {
+    public Car(String make, String model, int mileage, int price, String imageUrl) {
         this.make = make;
         this.model = model;
         this.mileage = mileage;
         this.price = price;
+        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -103,6 +107,14 @@ public class Car {
         return updated;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -111,6 +123,7 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", mileage=" + mileage +
                 ", price=" + price +
+                ", imageUrl='" + imageUrl + '\'' +
                 ", created=" + created +
                 ", updated=" + updated +
                 '}';

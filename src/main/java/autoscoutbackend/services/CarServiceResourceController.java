@@ -21,7 +21,6 @@ public class CarServiceResourceController {
 
         Inventory inventory = new Inventory();
 
-
         Session session = HibernateSessionFactory.getSessionFactory().getCurrentSession();
 
         try {
