@@ -1,7 +1,7 @@
 package autoscoutbackend.rest.services;
 
 import autoscoutbackend.models.Car;
-import autoscoutbackend.models.Inventory;
+import autoscoutbackend.models.JSONList;
 import autoscoutbackend.models.Make;
 import autoscoutbackend.rest.handler.MakeHandler;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,7 +17,15 @@ public class MakeServiceResourceController {
 
     @RequestMapping("/get-all-makes")
     @CrossOrigin(origins = "http://localhost:3000")
-    public List<Make> getAllMakes() {
-        return makeHandler.GetAllMakes();
+    public JSONList getAllMakes() {
+
+        JSONList JSONList = new JSONList();
+
+        List makes = makeHandler.GetAllMakes();
+
+        for (Object make : makes){
+            JSONList.addItem(make);
+        }
+        return JSONList;
     }
 }

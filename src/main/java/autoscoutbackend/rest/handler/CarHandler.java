@@ -22,6 +22,10 @@ public class CarHandler {
     }
 
     public List<Car> GetBugatti() {
-        return null;
+        return carEntityRepository.getAllBugatti("Bugatti");
+    }
+
+    public List<Car> GetPorsche() {
+        return carEntityRepository.getAllPorsche();
     }
 }

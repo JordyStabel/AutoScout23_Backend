@@ -1,7 +1,7 @@
 package autoscoutbackend.rest.services;
 
 import autoscoutbackend.models.Car;
-import autoscoutbackend.models.Inventory;
+import autoscoutbackend.models.JSONList;
 import autoscoutbackend.rest.handler.CarHandler;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,15 +17,15 @@ public class CarServiceResourceController {
 
     @RequestMapping("/get-all-cars")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Inventory getAllCars() {
-        Inventory inventory = new Inventory();
+    public JSONList getAllCars() {
+        JSONList JSONList = new JSONList();
 
         List cars = carHandler.GetAllCars();
 
         for (Object car : cars){
-            inventory.addCar((Car) car);
+            JSONList.addItem(car);
         }
-        return inventory;
+        return JSONList;
     }
 
     @RequestMapping(value = "/get-time")
@@ -50,8 +50,14 @@ public class CarServiceResourceController {
 
     @GetMapping(value = "/bugatti")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Car getAllBugatti(){
-        return carHandler.GetById(9);
+    public List<Car> getAllBugatti(){
+        return carHandler.GetBugatti();
+    }
+
+    @GetMapping(value = "/porsche")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public List<Car> getAllPorsche(){
+        return carHandler.GetPorsche();
     }
 }
 

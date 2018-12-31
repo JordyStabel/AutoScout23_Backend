@@ -1,11 +1,12 @@
 package autoscoutbackend.dal.repository;
 
 import autoscoutbackend.dal.HibernateSessionFactory;
-import autoscoutbackend.models.Car;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.annotations.Where;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
