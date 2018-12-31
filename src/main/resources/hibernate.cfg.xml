@@ -23,5 +23,7 @@
 
         <!-- The mapping information of entities -->
         <mapping class="autoscoutbackend.models.Car"/>
+        <mapping class="autoscoutbackend.models.Make"/>
+        <mapping class="autoscoutbackend.models.User"/>
     </session-factory>
 </hibernate-configuration>

@@ -9,15 +9,19 @@ public class CarHandler {
 
     private CarEntityRepository carEntityRepository = new CarEntityRepository();
 
-    public void SubmitCar(Car car){
+    public void SubmitCar(Car car) {
         carEntityRepository.save(car);
     }
 
-    public List<Car> GetAllCars(){
+    public List<Car> GetAllCars() {
         return carEntityRepository.findAll();
     }
 
     public Car GetById(int id) {
         return carEntityRepository.findOne(id);
+    }
+
+    public List<Car> GetBugatti() {
+        return null;
     }
 }

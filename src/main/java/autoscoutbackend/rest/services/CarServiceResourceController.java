@@ -3,13 +3,8 @@ package autoscoutbackend.rest.services;
 import autoscoutbackend.models.Car;
 import autoscoutbackend.models.Inventory;
 import autoscoutbackend.rest.handler.CarHandler;
-import com.google.gson.Gson;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -51,6 +46,12 @@ public class CarServiceResourceController {
     @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Car car){
         carHandler.SubmitCar(car);
+    }
+
+    @GetMapping(value = "/bugatti")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public Car getAllBugatti(){
+        return carHandler.GetById(9);
     }
 }
 
