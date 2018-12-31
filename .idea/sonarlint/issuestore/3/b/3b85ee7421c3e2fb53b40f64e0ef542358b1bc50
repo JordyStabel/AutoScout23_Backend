@@ -1,4 +1,6 @@
 
-[
-squid:S106["9Replace this use of System.out or System.err by a logger.(”¹¤ôýÿÿÿÿ8¾¼‡þÿ,
-nsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(àÒˆ­ûÿÿÿÿ8¾¼‡þÿ,
+]squid:UselessImportCheck"2Remove this unused import 'javax.xml.ws.Response'.(ðá¼‹8þƒ „€-
+gsquid:UselessImportCheck	"<Remove this unused import 'org.hibernate.cfg.Configuration'.(ö¬ä8ž¥è…€-
+isquid:UselessImportCheck"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬þÿÿÿÿ8ž¥è…€-
+bsquid:UselessImportCheck"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ž¥è…€-
+\squid:UselessImportCheck"1Remove this unused import 'com.google.gson.Gson'.(–§8²õ½„€-

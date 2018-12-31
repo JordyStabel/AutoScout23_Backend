@@ -20,7 +20,7 @@ public class CarServiceResourceController {
 
     private CarHandler carHandler = new CarHandler();
 
-    @RequestMapping("/getAllCars")
+    @RequestMapping("/get-all-cars")
     @CrossOrigin(origins = "http://localhost:3000")
     public Inventory getAllCars() {
         Inventory inventory = new Inventory();
@@ -33,7 +33,7 @@ public class CarServiceResourceController {
         return inventory;
     }
 
-    @RequestMapping("/car")
+    @RequestMapping(value = "/get-time")
     @CrossOrigin(origins = "http://localhost:3000")
     public String getTimeMessage(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
@@ -41,13 +41,13 @@ public class CarServiceResourceController {
         return dateFormat.format(date);
     }
 
-    @GetMapping("/autoscoutbackend/test")
+    @GetMapping(value = "/car/{id}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public String runTest(){
-        return "This is a autoscoutbackend.test, returning a string....this.";
+    public Car getCarById(@PathVariable int id){
+        return carHandler.GetById(id);
     }
 
-    @PostMapping(value = "/submitNewCar")
+    @PostMapping(value = "/new-car")
     @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Car car){
         carHandler.SubmitCar(car);

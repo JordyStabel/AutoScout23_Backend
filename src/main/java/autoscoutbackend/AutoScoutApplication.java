@@ -31,12 +31,4 @@ public class AutoScoutApplication {
             }
         };
     }
-
-    @RequestMapping("/car")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public String getTimeMessage(){
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
-        Date date = new Date();
-        return dateFormat.format(date);
-    }
 }

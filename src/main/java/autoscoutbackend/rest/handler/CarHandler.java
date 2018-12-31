@@ -2,7 +2,6 @@ package autoscoutbackend.rest.handler;
 
 import autoscoutbackend.dal.repository.CarEntityRepository;
 import autoscoutbackend.models.Car;
-import org.hibernate.Session;
 
 import java.util.List;
 
