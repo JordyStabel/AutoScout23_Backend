@@ -1,12 +1,9 @@
 package autoscoutbackend.rest.services;
 
-import autoscoutbackend.models.Car;
 import autoscoutbackend.models.JSONList;
 import autoscoutbackend.models.Make;
 import autoscoutbackend.rest.handler.MakeHandler;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,9 +20,15 @@ public class MakeServiceResourceController {
 
         List makes = makeHandler.GetAllMakes();
 
-        for (Object make : makes){
+        for (Object make : makes) {
             JSONList.addItem(make);
         }
         return JSONList;
+    }
+
+    @PostMapping(value = "/new-make")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public void submitNewCar(@RequestBody Make make) {
+        makeHandler.AddMake(make);
     }
 }

@@ -1,5 +1,6 @@
 package autoscoutbackend.dal;
 
+import autoscoutbackend.models.Car;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -19,7 +20,6 @@ public class HibernateSessionFactory {
     private static SessionFactory buildNewSessionFactory(){
         return new Configuration()
                 .configure("hibernate.cfg.xml")
-                //.addAnnotatedClass(Car.class)
                 .buildSessionFactory();
     }
 }

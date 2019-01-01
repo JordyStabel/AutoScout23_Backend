@@ -1,47 +1,46 @@
 package autoscoutbackend.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity(name = "Car")
+@Entity
 @Table(name = "Car")
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Make sure it auto increments the 'id'
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "make")
+    @NotNull
     private String make;
 
-    @Column(name = "model")
+    @NotNull
     private String model;
 
-    @Column(name = "mileage")
+    @NotNull
     private int mileage;
 
-    @Column(name = "price")
+    @NotNull
     private int price;
 
-    @Column(name = "image")
+    @NotNull
     private String image;
 
     @PrePersist
     protected void onCreate() {
-        created = new Date();
+        date_created = new Date();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updated = new Date();
+        date_updated = new Date();
     }
 
-    @Column(name = "date_added")
-    private Date created;
+    @NotNull
+    private Date date_created;
 
-    @Column(name = "date_updated")
-    private Date updated;
+    private Date date_updated;
 
     public Car(){
 
@@ -102,16 +101,16 @@ public class Car {
         this.price = price;
     }
 
-    public Date getCreated() {
-        return created;
+    public Date getDate_created() {
+        return date_created;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setDate_created(Date created) {
+        this.date_created = created;
     }
 
-    public Date getUpdated() {
-        return updated;
+    public Date getDate_updated() {
+        return date_updated;
     }
 
     public String getImage() {
@@ -131,12 +130,12 @@ public class Car {
                 ", mileage=" + mileage +
                 ", price=" + price +
                 ", image='" + image + '\'' +
-                ", created=" + created +
-                ", updated=" + updated +
+                ", created=" + date_created +
+                ", updated=" + date_updated +
                 '}';
     }
 
-    public void setUpdated(Date updated) {
-        this.updated = updated;
+    public void setDate_updated(Date updated) {
+        this.date_updated = updated;
     }
 }

@@ -44,7 +44,7 @@ public class CarServiceResourceController {
 
     @GetMapping(value = "/car-make/{make}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public JSONList getAllBugatti(@PathVariable String make){
+    public JSONList getCarByMake(@PathVariable String make){
         JSONList jsonList = new JSONList();
 
         List cars = carHandler.GetByMake(make);
