@@ -3,7 +3,7 @@ package autoscoutbackend.models;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+@Entity(name = "Car")
 @Table(name = "Car")
 public class Car {
 

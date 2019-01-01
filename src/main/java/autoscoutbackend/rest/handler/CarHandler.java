@@ -21,11 +21,7 @@ public class CarHandler {
         return carEntityRepository.findOne(id);
     }
 
-    public List<Car> GetBugatti() {
-        return carEntityRepository.getAllBugatti("Bugatti");
-    }
-
-    public List<Car> GetPorsche() {
-        return carEntityRepository.getAllPorsche();
+    public List<Car> GetByMake(String make) {
+        return carEntityRepository.getByMake(make);
     }
 }

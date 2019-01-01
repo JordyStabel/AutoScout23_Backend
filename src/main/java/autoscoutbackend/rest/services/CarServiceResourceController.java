@@ -18,14 +18,14 @@ public class CarServiceResourceController {
     @RequestMapping("/get-all-cars")
     @CrossOrigin(origins = "http://localhost:3000")
     public JSONList getAllCars() {
-        JSONList JSONList = new JSONList();
+        JSONList jsonList = new JSONList();
 
         List cars = carHandler.GetAllCars();
 
         for (Object car : cars){
-            JSONList.addItem(car);
+            jsonList.addItem(car);
         }
-        return JSONList;
+        return jsonList;
     }
 
     @RequestMapping(value = "/get-time")
@@ -36,28 +36,29 @@ public class CarServiceResourceController {
         return dateFormat.format(date);
     }
 
-    @GetMapping(value = "/car/{id}")
+    @GetMapping(value = "/car-id/{id}")
     @CrossOrigin(origins = "http://localhost:3000")
     public Car getCarById(@PathVariable int id){
         return carHandler.GetById(id);
+    }
+
+    @GetMapping(value = "/car-make/{make}")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public JSONList getAllBugatti(@PathVariable String make){
+        JSONList jsonList = new JSONList();
+
+        List cars = carHandler.GetByMake(make);
+
+        for (Object car : cars){
+            jsonList.addItem(car);
+        }
+        return jsonList;
     }
 
     @PostMapping(value = "/new-car")
     @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Car car){
         carHandler.SubmitCar(car);
-    }
-
-    @GetMapping(value = "/bugatti")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public List<Car> getAllBugatti(){
-        return carHandler.GetBugatti();
-    }
-
-    @GetMapping(value = "/porsche")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public List<Car> getAllPorsche(){
-        return carHandler.GetPorsche();
     }
 }
 
