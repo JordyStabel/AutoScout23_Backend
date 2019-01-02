@@ -1,6 +1,7 @@
 package autoscoutbackend.rest.handler;
 
 import autoscoutbackend.dal.repository.MakeEntityRepository;
+import autoscoutbackend.models.Car;
 import autoscoutbackend.models.Make;
 
 import java.util.List;
@@ -19,5 +20,9 @@ public class MakeHandler {
 
     public Make GetById(int id) {
         return makeEntityRepository.findOne(id);
+    }
+
+    public Make GetByName(String make) {
+        return makeEntityRepository.getByName(make);
     }
 }

@@ -2,22 +2,20 @@ package autoscoutbackend.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Entity
 @Table(name = "Make")
 public class Make {
-    @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE, CascadeType.PERSIST}, fetch=FetchType.LAZY)
-    private List<Car> carEntities;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "make_id")
+    private int makeID;
 
     @NotNull
     private String make;
 
-    public Make(){
+    public Make() {
 
     }
 
@@ -25,12 +23,12 @@ public class Make {
         this.make = make;
     }
 
-    public int getId() {
-        return id;
+    public int getMakeID() {
+        return makeID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMakeID(int id) {
+        this.makeID = id;
     }
 
     public String getMake() {
@@ -41,18 +39,10 @@ public class Make {
         this.make = make;
     }
 
-    public List<Car> getCarEntities() {
-        return carEntities;
-    }
-
-    public void setCarEntities(List<Car> carEntities) {
-        this.carEntities = carEntities;
-    }
-
     @Override
     public String toString() {
         return "Make{" +
-                "id=" + id +
+                "id=" + makeID +
                 ", make='" + make + '\'' +
                 '}';
     }

@@ -8,9 +8,13 @@ import java.util.Date;
 @Table(name = "Car")
 public class Car {
 
+    @ManyToOne
+    @JoinTable(name = "Car_Make") // @JoinColumn to add a column to the Car table with the correct Make_Id instead of crating an extra table
+    private Make carMake;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int carID;
 
     @NotNull
     private String make;
@@ -61,12 +65,12 @@ public class Car {
         this.price = price;
     }
 
-    public int getId() {
-        return id;
+    public int getCarID() {
+        return carID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCarID(int id) {
+        this.carID = id;
     }
 
     public String getMake() {
@@ -121,10 +125,18 @@ public class Car {
         this.image = image;
     }
 
+    public Make getCarMake() {
+        return carMake;
+    }
+
+    public void setCarMake(Make carMake) {
+        this.carMake = carMake;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
-                "id=" + id +
+                "id=" + carID +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", mileage=" + mileage +

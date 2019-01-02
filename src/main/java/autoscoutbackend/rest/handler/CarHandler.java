@@ -14,14 +14,15 @@ public class CarHandler {
     private MakeEntityRepository makeEntityRepository = new MakeEntityRepository();
 
     public void SubmitCar(Car car) {
+        Make make;
+        try{
+            make = makeEntityRepository.getByName(car.getMake());
+        } catch (Exception e){
+            make = new Make(car.getMake());
+            makeEntityRepository.save(make);
+        }
+        car.setCarMake(make);
         carEntityRepository.save(car);
-        Make make = new Make(car.getMake());
-
-        List<Car> cars = new ArrayList<>();
-        cars.add(car);
-        cars.add(new Car("Lamborghini", "Aventador SV", 1353, 425000, ""));
-        make.setCarEntities(cars);
-        makeEntityRepository.save(make);
     }
 
     public List<Car> GetAllCars() {

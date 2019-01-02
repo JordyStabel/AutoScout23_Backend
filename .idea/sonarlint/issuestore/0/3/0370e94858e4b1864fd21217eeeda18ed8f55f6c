@@ -1,5 +1,6 @@
 
-msquid:S00100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÝÁ¦8Ê¯…Û€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8Ê¯…Û€-
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8Ê¯…Û€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8Ê¯…Û€-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ù­ðüÿÿÿÿ8µÂ©ù€-
+msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8ÊÓóø€-
+msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8ÊÓóø€-
+msquid:S00100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÝÁ¦8ÊÓóø€-
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8ÊÓóø€-

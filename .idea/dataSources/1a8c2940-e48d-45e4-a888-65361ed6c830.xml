@@ -14,7 +14,7 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2019-01-01.20:59:34.907</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2019-01-02.17:20:17.720</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -55,95 +55,111 @@
       <ObjectId>16393</ObjectId>
     </schema>
     <table id="17" parent="4" name="Car">
-      <ObjectId>1861581670</ObjectId>
-      <CreatedTimestamp>2019-01-01.20:55:40.357</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-01.20:55:40.357</ModifiedTimestamp>
+      <ObjectId>279672044</ObjectId>
+      <CreatedTimestamp>2019-01-02.17:18:21.850</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-02.17:18:21.893</ModifiedTimestamp>
     </table>
     <table id="18" parent="4" name="Make">
-      <ObjectId>1909581841</ObjectId>
-      <CreatedTimestamp>2019-01-01.20:55:40.377</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-01.20:55:40.377</ModifiedTimestamp>
+      <ObjectId>311672158</ObjectId>
+      <CreatedTimestamp>2019-01-02.17:18:21.873</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-02.17:18:21.893</ModifiedTimestamp>
     </table>
-    <column id="19" parent="17" name="id">
+    <column id="19" parent="17" name="carID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="17" name="created">
+    <column id="20" parent="17" name="date_created">
       <Position>2</Position>
       <DataType>datetime|0</DataType>
-    </column>
-    <column id="21" parent="17" name="image">
-      <Position>3</Position>
-      <DefaultExpression>&apos;https://cdn4.iconfinder.com/data/icons/car-silhouettes/1000/sedan-512.png&apos;</DefaultExpression>
-      <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="17" name="make">
+    <column id="21" parent="17" name="date_updated">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="22" parent="17" name="image">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="17" name="mileage">
+    <column id="23" parent="17" name="make">
       <Position>5</Position>
-      <DataType>int|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="24" parent="17" name="model">
-      <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="17" name="price">
-      <Position>7</Position>
+    <column id="24" parent="17" name="mileage">
+      <Position>6</Position>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="17" name="updated">
-      <Position>8</Position>
-      <DataType>datetime|0</DataType>
+    <column id="25" parent="17" name="model">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <index id="27" parent="17" name="PK__Car__3213E83F9B5DBCDA">
+    <column id="26" parent="17" name="price">
+      <Position>8</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="17" name="make_id">
+      <Position>9</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="28" parent="17" name="PK__Car__1436F094948A9B21">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>carID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="28" parent="17" name="PK__Car__3213E83F9B5DBCDA">
-      <ObjectId>1877581727</ObjectId>
+    <key id="29" parent="17" name="PK__Car__1436F094948A9B21">
+      <ObjectId>295672101</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-01.20:55:40.357</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-01.20:55:40.357</ModifiedTimestamp>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>PK__Car__3213E83F9B5DBCDA</UnderlyingIndexName>
+      <CreatedTimestamp>2019-01-02.17:18:21.850</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-02.17:18:21.850</ModifiedTimestamp>
+      <ColNames>carID</ColNames>
+      <UnderlyingIndexName>PK__Car__1436F094948A9B21</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="18" name="id">
+    <foreign-key id="30" parent="17" name="FK6hfi59dq0akeke2mm2h1r1y10">
+      <ObjectId>343672272</ObjectId>
+      <CreatedTimestamp>2019-01-02.17:18:21.893</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-02.17:18:21.893</ModifiedTimestamp>
+      <ColNames>make_id</ColNames>
+      <RefTableId>311672158</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Make</RefTableName>
+      <RefKeyName>PK__Make__335C91D802A6F95E</RefKeyName>
+      <RefColNames>make_id</RefColNames>
+    </foreign-key>
+    <column id="31" parent="18" name="make_id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="18" name="make">
+    <column id="32" parent="18" name="make">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <index id="31" parent="18" name="PK__Make__3213E83FBA18573F">
+    <index id="33" parent="18" name="PK__Make__335C91D802A6F95E">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>make_id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="32" parent="18" name="PK__Make__3213E83FBA18573F">
-      <ObjectId>1925581898</ObjectId>
+    <key id="34" parent="18" name="PK__Make__335C91D802A6F95E">
+      <ObjectId>327672215</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-01.20:55:40.377</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-01.20:55:40.377</ModifiedTimestamp>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>PK__Make__3213E83FBA18573F</UnderlyingIndexName>
+      <CreatedTimestamp>2019-01-02.17:18:21.873</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-02.17:18:21.873</ModifiedTimestamp>
+      <ColNames>make_id</ColNames>
+      <UnderlyingIndexName>PK__Make__335C91D802A6F95E</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
   </database-model>

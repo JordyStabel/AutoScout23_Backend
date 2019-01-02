@@ -38,7 +38,7 @@ public class RetrieveCreatedCar {
             session.getTransaction().commit();
 
             // Retrieve the id of the new car: primary key
-            int id = newCar1.getId();
+            int id = newCar1.getCarID();
 
             // Get new session and start transaction
             session = sessionFactory.getCurrentSession();
