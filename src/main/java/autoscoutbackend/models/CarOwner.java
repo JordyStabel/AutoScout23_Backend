@@ -1,35 +1,38 @@
 package autoscoutbackend.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+@Entity
+@Table(name = "CarOwner")
 public class CarOwner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "carowner_id")
     private int id;
 
-    @Column(name = "username")
+    @NotNull
     private String userName;
 
-    @Column(name = "date_created")
-    private Date created;
+    @NotNull
+    private Date dateCreated;
 
     @OneToOne
+    @JoinTable(name = "CarOwner_Car")
     private Car car;
 
     @PrePersist
     protected void onCreate() {
-        created = new Date();
+        dateCreated = new Date();
     }
 
     public CarOwner(){
 
     }
 
-    public CarOwner(String userName, Date created) {
+    public CarOwner(String userName) {
         this.userName = userName;
-        this.created = created;
     }
 
     public int getId() {
@@ -48,12 +51,12 @@ public class CarOwner {
         this.userName = userName;
     }
 
-    public Date getCreated() {
-        return created;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setDateCreated(Date created) {
+        this.dateCreated = created;
     }
 
     public Car getCar() {
@@ -69,7 +72,7 @@ public class CarOwner {
         return "Owner{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", created=" + created +
+                ", created=" + dateCreated +
                 ", car=" + car +
                 '}';
     }
