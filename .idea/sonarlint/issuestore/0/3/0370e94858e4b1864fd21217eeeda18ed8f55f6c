@@ -1,6 +1,8 @@
 
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ù­ðüÿÿÿÿ8µÂ©ù€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8ÊÓóø€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8ÊÓóø€-
-msquid:S00100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÝÁ¦8ÊÓóø€-
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8ÊÓóø€-
+msquid:S00100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8ÊÓóø€-
+msquid:S00100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÝÁ¦8ÊÓóø€-
+msquid:S00100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8ÊÓóø€-
+[squid:UselessImportCheck
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8óÆÒú€-
+Usquid:S1135"2Complete the task associated to this TODO comment.(žÕò™ûÿÿÿÿ8šÒïþ€-
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8ÊÓóø€-

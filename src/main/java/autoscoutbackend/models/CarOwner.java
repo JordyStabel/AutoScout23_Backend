@@ -3,36 +3,32 @@ package autoscoutbackend.models;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "User")
-public class User {
-
+public class CarOwner {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Make sure it auto increments the 'id'
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "carowner_id")
     private int id;
 
     @Column(name = "username")
     private String userName;
 
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "date_created")
     private Date created;
+
+    @OneToOne
+    private Car car;
 
     @PrePersist
     protected void onCreate() {
         created = new Date();
     }
 
-    public User(){
+    public CarOwner(){
 
     }
 
-    public User(String userName, String password, Date created) {
+    public CarOwner(String userName, Date created) {
         this.userName = userName;
-        this.password = password;
         this.created = created;
     }
 
@@ -52,14 +48,6 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public Date getCreated() {
         return created;
     }
@@ -68,13 +56,21 @@ public class User {
         this.created = created;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "Owner{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
                 ", created=" + created +
+                ", car=" + car +
                 '}';
     }
 }
