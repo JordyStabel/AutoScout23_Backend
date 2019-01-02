@@ -3,6 +3,8 @@ package autoscoutbackend.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "CarOwner")
@@ -17,10 +19,6 @@ public class CarOwner {
 
     @NotNull
     private Date dateCreated;
-
-    @OneToOne
-    @JoinTable(name = "CarOwner_Car")
-    private Car car;
 
     @PrePersist
     protected void onCreate() {
@@ -59,21 +57,12 @@ public class CarOwner {
         this.dateCreated = created;
     }
 
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
-    }
-
     @Override
     public String toString() {
-        return "Owner{" +
+        return "CarOwner{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", created=" + dateCreated +
-                ", car=" + car +
+                ", dateCreated=" + dateCreated +
                 '}';
     }
 }

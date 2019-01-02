@@ -12,6 +12,10 @@ public class Car {
     @JoinTable(name = "Car_Make") // @JoinColumn to add a column to the Car table with the correct Make_Id instead of crating an extra table
     private Make carMake;
 
+    @ManyToOne
+    @JoinTable(name = "Car_CarOwner")
+    private CarOwner carOwner;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int carID;
@@ -131,6 +135,14 @@ public class Car {
 
     public void setCarMake(Make carMake) {
         this.carMake = carMake;
+    }
+
+    public CarOwner getCarOwner() {
+        return carOwner;
+    }
+
+    public void setCarOwner(CarOwner carOwner) {
+        this.carOwner = carOwner;
     }
 
     @Override

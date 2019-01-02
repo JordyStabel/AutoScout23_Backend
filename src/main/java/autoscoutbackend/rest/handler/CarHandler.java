@@ -8,6 +8,7 @@ import autoscoutbackend.models.CarOwner;
 import autoscoutbackend.models.Make;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CarHandler {
@@ -25,14 +26,20 @@ public class CarHandler {
             makeEntityRepository.save(make);
         }
 
+        CarOwner owner;
+        try{
+            owner = carOwnerEntityRepository.getByName("Jordy");
+        } catch (Exception e){
+            owner = new CarOwner("Jordy");
+            carOwnerEntityRepository.save(owner);
+        }
+
         //TODO: Fetch an actual car-owner from front-end
-        CarOwner owner = new CarOwner();
-        owner.setUserName("Jordy");
-        owner.setCar(car);
+        carOwnerEntityRepository.save(owner);
+        car.setCarOwner(owner);
 
         car.setCarMake(make);
         carEntityRepository.save(car);
-        carOwnerEntityRepository.save(owner);
     }
 
     public List<Car> GetAllCars() {
