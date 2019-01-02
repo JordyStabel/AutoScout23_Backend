@@ -1,2 +1,3 @@
 
-Xsquid:S1118":Add a private constructor to hide the implicit public one.(»˜Ó¢8ó„Ïûÿ,
+`squid:UselessImportCheck"8Remove this unused import 'autoscoutbackend.models.Car'.(Ëã•L8™ˆµ×€-
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(»˜Ó¢8ˆ©˜×€-

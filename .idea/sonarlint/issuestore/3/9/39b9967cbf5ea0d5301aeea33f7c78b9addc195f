@@ -1,10 +1,10 @@
 
-gsquid:S00119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ËÃ…8±æπ¶Ä-
-_squid:UselessImportCheck"5Remove this unused import 'javax.persistence.Column'.(Ï˚ÊH8ì∏À¶Ä-
-lsquid:UselessImportCheck"<Remove this unused import 'org.hibernate.annotations.Where'.(…÷¯Ô˛ˇˇˇˇ8ì∏À¶Ä-
 [
-squid:S106g"9Replace this use of System.out or System.err by a logger.(©˛Í‹˙ˇˇˇˇ8±æπ¶Ä-
+squid:S106P"9Replace this use of System.out or System.err by a logger.(©˛Í‹˙ˇˇˇˇ8Éµ√€Ä-
+lsquid:UselessImportCheck"<Remove this unused import 'org.hibernate.annotations.Where'.(…÷¯Ô˛ˇˇˇˇ8Éµ√€Ä-
+jsquid:S001120"FDefine and throw a dedicated exception instead of using a generic one.(“Ç“È¸ˇˇˇˇ8Éµ√€Ä-
+dsquid:UselessImportCheck	"4Remove this unused import 'javax.persistence.Table'.(ò¯åì¯ˇˇˇˇ8Éµ√€Ä-
 [
-squid:S106P"9Replace this use of System.out or System.err by a logger.(©˛Í‹˙ˇˇˇˇ8±æπ¶Ä-
-jsquid:S001120"FDefine and throw a dedicated exception instead of using a generic one.(“Ç“È¸ˇˇˇˇ8±æπ¶Ä-
-dsquid:UselessImportCheck	"4Remove this unused import 'javax.persistence.Table'.(ò¯åì¯ˇˇˇˇ8”……¶Ä-
+squid:S106g"9Replace this use of System.out or System.err by a logger.(©˛Í‹˙ˇˇˇˇ8Éµ√€Ä-
+gsquid:S00119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ËÃ…8Éµ√€Ä-
+_squid:UselessImportCheck"5Remove this unused import 'javax.persistence.Column'.(Ï˚ÊH8Éµ√€Ä-

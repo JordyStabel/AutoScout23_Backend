@@ -2,6 +2,7 @@ package models;
 
 import autoscoutbackend.models.Car;
 import autoscoutbackend.dal.*;
+import autoscoutbackend.models.Make;
 import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Before;
