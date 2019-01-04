@@ -10,13 +10,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+@CrossOrigin(origins = {"http://localhost:3000", "https://autoscout23.herokuapp.com", "https://jordystabel.github.io/AutoScout23_Frontend"} , maxAge = 3600)
 @RestController
 public class CarServiceResourceController {
 
     private CarHandler carHandler = new CarHandler();
 
     @RequestMapping("/get-all-cars")
-    @CrossOrigin(origins = "http://localhost:3000")
     public JSONList getAllCars() {
         JSONList jsonList = new JSONList();
 
@@ -29,7 +29,6 @@ public class CarServiceResourceController {
     }
 
     @RequestMapping(value = "/get-time")
-    @CrossOrigin(origins = "http://localhost:3000")
     public String getTimeMessage(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
         Date date = new Date();
@@ -37,13 +36,11 @@ public class CarServiceResourceController {
     }
 
     @GetMapping(value = "/car-id/{id}")
-    @CrossOrigin(origins = "http://localhost:3000")
     public Car getCarById(@PathVariable int id){
         return carHandler.GetById(id);
     }
 
     @GetMapping(value = "/car-make/{make}")
-    @CrossOrigin(origins = "http://localhost:3000")
     public JSONList getCarByMake(@PathVariable String make){
         JSONList jsonList = new JSONList();
 
@@ -55,8 +52,12 @@ public class CarServiceResourceController {
         return jsonList;
     }
 
+    @PostMapping(value = "/car-update")
+    public void updateCar(@RequestBody Car car){
+        carHandler.SubmitCar(car);
+    }
+
     @PostMapping(value = "/new-car")
-    @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Car car){
         carHandler.SubmitCar(car);
     }

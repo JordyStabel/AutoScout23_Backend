@@ -1,6 +1,6 @@
 
-lsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ãê48õÎóø€-
-bsquid:UselessImportCheck"8Remove this unused import 'autoscoutbackend.models.Car'.(Ëã•L8±ÒÇú€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çò™¹8õÎóø€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şåàë8õÎóø€-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÓŠÌ8±ÒÇú€-
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÓŠÌ8éóÇŸ-
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şåàë8éóÇŸ-
+`squid:UselessImportCheck"8Remove this unused import 'autoscoutbackend.models.Car'.(Ëã•L8éóÇŸ-
+jsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ãê48éóÇŸ-
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çò™¹8éóÇŸ-

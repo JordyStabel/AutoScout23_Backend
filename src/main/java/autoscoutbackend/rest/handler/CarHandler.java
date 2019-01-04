@@ -37,9 +37,23 @@ public class CarHandler {
         //TODO: Fetch an actual car-owner from front-end
         carOwnerEntityRepository.save(owner);
         car.setCarOwner(owner);
-
         car.setCarMake(make);
-        carEntityRepository.save(car);
+
+        // For updating exciting cars
+        if (car.getCarID() != 0)
+        {
+            Car carToUpdate = carEntityRepository.findOne(car.getCarID());
+            carToUpdate.setCarOwner(car.getCarOwner());
+            carToUpdate.setCarMake(car.getCarMake());
+            carToUpdate.setPrice(car.getPrice());
+            carToUpdate.setMileage(car.getMileage());
+            carToUpdate.setImage(car.getImage());
+            carToUpdate.setModel(car.getModel());
+            carEntityRepository.save(carToUpdate);
+        }
+        else{
+            carEntityRepository.save(car);
+        }
     }
 
     public List<Car> GetAllCars() {

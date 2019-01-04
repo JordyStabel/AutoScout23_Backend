@@ -51,3 +51,7 @@ c
 3src/main/java/autoscoutbackend/models/CarOwner.java,5\4\5443c98ef696a7f3e5a92e3e92d53398ff935a70
 {
 Ksrc/main/java/autoscoutbackend/dal/repository/CarOwnerEntityRepository.java,9\3\93579c235066f14771b386c2666b6bfa9b8fc281
+p
+@src/main/java/autoscoutbackend/rest/handler/CarOwnerHandler.java,5\1\516045e430b59ae11e69f91b1a66621c46643d44
+]
+-src/test/java/models/CarOwnerDBEntryTest.java,a\2\a244858ca2841dea58b93e19d5b02afdfc65e0b8

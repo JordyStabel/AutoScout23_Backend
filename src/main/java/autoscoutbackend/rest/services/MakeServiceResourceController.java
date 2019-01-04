@@ -5,6 +5,8 @@ import autoscoutbackend.models.Make;
 import autoscoutbackend.rest.handler.MakeHandler;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
