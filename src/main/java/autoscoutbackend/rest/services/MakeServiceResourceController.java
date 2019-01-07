@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class MakeServiceResourceController {
 
