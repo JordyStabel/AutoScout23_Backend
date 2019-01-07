@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69423067-6749-4f28-ad50-62a6329aecab" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/models/FailTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a8c2940-e48d-45e4-a888-65361ed6c830.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/1a8c2940-e48d-45e4-a888-65361ed6c830.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a8c2940-e48d-45e4-a888-65361ed6c830/storage_v2/_src_/database/AutoScout23.8Owugw/schema/dbo.sYMBAA.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/1a8c2940-e48d-45e4-a888-65361ed6c830/storage_v2/_src_/database/AutoScout23.8Owugw/schema/dbo.sYMBAA.meta" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0370e94858e4b1864fd21217eeeda18ed8f55f6c" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0370e94858e4b1864fd21217eeeda18ed8f55f6c" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39b9967cbf5ea0d5301aeea33f7c78b9addc195f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39b9967cbf5ea0d5301aeea33f7c78b9addc195f" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/516045e430b59ae11e69f91b1a66621c46643d44" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/516045e430b59ae11e69f91b1a66621c46643d44" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2fdf071cce53836179a07ae0dbb3e55f372f672" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2fdf071cce53836179a07ae0dbb3e55f372f672" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/autoscoutbackend/rest/services/CarServiceResourceController.class" afterPath="$PROJECT_DIR$/target/classes/autoscoutbackend/rest/services/CarServiceResourceController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/autoscoutbackend/rest/services/MakeServiceResourceController.class" afterPath="$PROJECT_DIR$/target/classes/autoscoutbackend/rest/services/MakeServiceResourceController.class" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/FailTest.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -120,21 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBEntryTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBEntryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/models/DBEntryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FailTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/models/FailTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -757,7 +734,7 @@
       <workItem from="1546637187660" duration="1239000" />
       <workItem from="1546849373656" duration="2972000" />
       <workItem from="1546859621549" duration="659000" />
-      <workItem from="1546883390724" duration="1023000" />
+      <workItem from="1546883390724" duration="1382000" />
     </task>
     <servers />
   </component>
@@ -794,7 +771,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143504000" />
+    <option name="totallyTimeSpent" value="143863000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1248,18 +1225,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/models/DBEntryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/FailTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/models/FailTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/DBEntryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="401">
+          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding />
         </state>
       </provider>
