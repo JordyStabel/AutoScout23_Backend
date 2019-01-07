@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69423067-6749-4f28-ad50-62a6329aecab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,8 +67,8 @@
       <file leaf-file-name="AutoScoutApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -485,7 +483,7 @@
     </option>
     <option name="contentProportion" value="0.0997807" />
   </component>
-  <component name="RunManager" selected="JUnit.FailTest.failThisTest">
+  <component name="RunManager" selected="Spring Boot.AutoScoutApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -687,8 +685,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FailTest.failThisTest" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.AutoScoutApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.AutoScoutApplication" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FailTest.failThisTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.CarOwnerDBEntryTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.DBEntryTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.DBEntryTest.addEntry" />
@@ -740,7 +738,7 @@
       <workItem from="1546637187660" duration="1239000" />
       <workItem from="1546849373656" duration="2972000" />
       <workItem from="1546859621549" duration="659000" />
-      <workItem from="1546883390724" duration="3949000" />
+      <workItem from="1546883390724" duration="4336000" />
     </task>
     <servers />
   </component>
@@ -777,7 +775,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146430000" />
+    <option name="totallyTimeSpent" value="146817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -808,7 +806,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33146697" sideWeight="0.49677765" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33146697" sideWeight="0.49677765" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1245,8 +1243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
           <folding />
         </state>
       </provider>
