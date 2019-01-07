@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69423067-6749-4f28-ad50-62a6329aecab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/FailTest.java" afterPath="" />
-    </list>
+    <list default="true" id="69423067-6749-4f28-ad50-62a6329aecab" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,8 +108,8 @@
       <file leaf-file-name="DBEntryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/models/DBEntryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="379">
+              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -734,7 +732,7 @@
       <workItem from="1546637187660" duration="1239000" />
       <workItem from="1546849373656" duration="2972000" />
       <workItem from="1546859621549" duration="659000" />
-      <workItem from="1546883390724" duration="1382000" />
+      <workItem from="1546883390724" duration="1616000" />
     </task>
     <servers />
   </component>
@@ -771,7 +769,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143863000" />
+    <option name="totallyTimeSpent" value="144097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1235,8 +1233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/models/DBEntryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="379">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding />
         </state>
       </provider>
