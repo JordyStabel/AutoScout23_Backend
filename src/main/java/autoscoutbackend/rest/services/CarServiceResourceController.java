@@ -4,6 +4,7 @@ import autoscoutbackend.models.Car;
 import autoscoutbackend.models.JSONList;
 import autoscoutbackend.rest.handler.CarHandler;
 import autoscoutbackend.test.GetCars;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
