@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@CrossOrigin(origins = "https://autoscout23.herokuapp.com")
+@CrossOrigin(origins = "https://jordystabel.github.io/AutoScout23_Frontend")
 @RestController
 public class CarServiceResourceController {
 

@@ -12,14 +12,13 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-@CrossOrigin(origins = "https://autoscout23.herokuapp.com")
+@CrossOrigin(origins = "https://jordystabel.github.io/AutoScout23_Frontend")
 @RestController
 public class MakeServiceResourceController {
 
     private MakeHandler makeHandler = new MakeHandler();
 
     @RequestMapping("/get-all-makes")
-    @CrossOrigin(origins = "http://localhost:3000")
     public JSONList getAllMakes() {
 
         JSONList JSONList = new JSONList();
@@ -33,15 +32,7 @@ public class MakeServiceResourceController {
     }
 
     @PostMapping(value = "/new-make")
-    @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Make make) {
         makeHandler.AddMake(make);
-    }
-
-    @RequestMapping(value = "/get-time-test")
-    public String getTimeMessage(){
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
-        Date date = new Date();
-        return dateFormat.format(date + " This is a test...");
     }
 }
