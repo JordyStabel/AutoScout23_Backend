@@ -55,3 +55,5 @@ p
 @src/main/java/autoscoutbackend/rest/handler/CarOwnerHandler.java,5\1\516045e430b59ae11e69f91b1a66621c46643d44
 ]
 -src/test/java/models/CarOwnerDBEntryTest.java,a\2\a244858ca2841dea58b93e19d5b02afdfc65e0b8
+>
+.gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a

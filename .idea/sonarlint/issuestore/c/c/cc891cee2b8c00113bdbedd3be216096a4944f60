@@ -1,9 +1,9 @@
 
-†squid:S2637"k"date_created" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(àÆÎ8éóÇŸ-
-€squid:S2637"d"image" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(ø·´8éóÇŸ-
-psquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¯³áÿÿÿÿÿ8éóÇŸ-
-ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷…œ8éóÇŸ-
-tsquid:S00116"WRename this field "date_updated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î„§í8éóÇŸ-
-psquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õì™æúÿÿÿÿ8éóÇŸ-
-tsquid:S00116"WRename this field "date_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üº¢Ä8éóÇŸ-
-ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ĞÛı8éóÇŸ-
+‚squid:S2637A"d"image" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(ø·´8éóÇŸ-
+vsquid:S001163"WRename this field "date_updated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î„§í8éóÇŸ-
+vsquid:S001161"WRename this field "date_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üº¢Ä8éóÇŸ-
+ssquid:S00100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¯³áÿÿÿÿÿ8éóÇŸ-
+msquid:S00100t"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷…œ8éóÇŸ-
+ˆsquid:S26379"k"date_created" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(àÆÎ8éóÇŸ-
+msquid:S00100p"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ĞÛı8éóÇŸ-
+rsquid:S00100x"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õì™æúÿÿÿÿ8éóÇŸ-

@@ -1,12 +1,12 @@
 
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñáÉ*8ÏÝþÚ€-
+qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(´øÞ¾ùÿÿÿÿ8ÏÝþÚ€-
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÏÝþÚ€-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ÷“üùÿÿÿÿ8ÏÝþÚ€-
 hsquid:S2259""JA "NullPointerException" could be thrown; "myConnection" is nullable here.(´¢åæ8ÏÝþÚ€-
 V
 squid:S106"9Replace this use of System.out or System.err by a logger.(é¸Óó8ÏÝþÚ€-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ÷“üùÿÿÿÿ8ÏÝþÚ€-
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÏÝþÚ€-
 Fsquid:S1148$"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÏÝþÚ€-
-qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(´øÞ¾ùÿÿÿÿ8ÏÝþÚ€-
-U
-squid:S106"9Replace this use of System.out or System.err by a logger.(ñáÉ*8ÏÝþÚ€-
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(Ñæ˜ÿÿÿÿÿ8ÏÝþÚ€-

@@ -67,4 +67,8 @@ public class CarHandler {
     public List<Car> GetByMake(String make) {
         return carEntityRepository.getByMake(make);
     }
+
+    public void DeleteCar(Car car) { carEntityRepository.delete(car);}
+
+    public void DeleteCarById(int id) { carEntityRepository.delete(id);}
 }

@@ -43,6 +43,16 @@ public class CarServiceResourceController {
         return carHandler.GetById(id);
     }
 
+    @DeleteMapping(value = "/car-delete")
+    public void deleteCar(@RequestBody Car car){
+        carHandler.DeleteCar(car);
+    }
+
+    @DeleteMapping(value = "/car-delete/{id}")
+    public void deleteCarById(@PathVariable int id){
+        carHandler.DeleteCarById(id);
+    }
+
     @GetMapping(value = "/car-make/{make}")
     public JSONList getCarByMake(@PathVariable String make){
         JSONList jsonList = new JSONList();
