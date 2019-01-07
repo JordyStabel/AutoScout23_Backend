@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69423067-6749-4f28-ad50-62a6329aecab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/CarServiceResourceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/autoscoutbackend/rest/services/MakeServiceResourceController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,12 +67,12 @@
       <file leaf-file-name="AutoScoutApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state relative-caret-position="343">
+              <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#803#1303#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#803#1168#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -744,7 +742,7 @@
       <workItem from="1546637187660" duration="1239000" />
       <workItem from="1546849373656" duration="2972000" />
       <workItem from="1546859621549" duration="659000" />
-      <workItem from="1546883390724" duration="6536000" />
+      <workItem from="1546883390724" duration="6655000" />
     </task>
     <servers />
   </component>
@@ -781,7 +779,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149017000" />
+    <option name="totallyTimeSpent" value="149136000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1249,12 +1247,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/autoscoutbackend/AutoScoutApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+        <state relative-caret-position="343">
+          <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#803#1303#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#803#1168#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
           </folding>
         </state>
       </provider>
