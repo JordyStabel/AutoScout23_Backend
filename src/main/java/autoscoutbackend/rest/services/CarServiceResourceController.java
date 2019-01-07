@@ -3,6 +3,7 @@ package autoscoutbackend.rest.services;
 import autoscoutbackend.models.Car;
 import autoscoutbackend.models.JSONList;
 import autoscoutbackend.rest.handler.CarHandler;
+import autoscoutbackend.test.GetCars;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
@@ -11,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@CrossOrigin(origins = "https://jordystabel.github.io/AutoScout23_Frontend")
+@CrossOrigin(origins = "https://jordystabel.github.io/AutoScout23_Frontend", methods = {RequestMethod.GET, RequestMethod.DELETE, RequestMethod.POST})
 @RestController
 public class CarServiceResourceController {
 
