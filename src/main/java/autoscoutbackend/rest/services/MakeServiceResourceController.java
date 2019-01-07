@@ -12,7 +12,6 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-@CrossOrigin(origins = "https://jordystabel.github.io/AutoScout23_Frontend", methods = {RequestMethod.GET, RequestMethod.DELETE, RequestMethod.POST})
 @RestController
 public class MakeServiceResourceController {
 
