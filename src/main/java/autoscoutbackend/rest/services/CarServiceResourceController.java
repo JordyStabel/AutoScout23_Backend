@@ -4,13 +4,14 @@ import autoscoutbackend.models.Car;
 import autoscoutbackend.models.JSONList;
 import autoscoutbackend.rest.handler.CarHandler;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@CrossOrigin(origins = {"http://localhost:3000", "https://autoscout23.herokuapp.com", "https://jordystabel.github.io/AutoScout23_Frontend"} , maxAge = 3600)
+@CrossOrigin(origins = "https://autoscout23.herokuapp.com")
 @RestController
 public class CarServiceResourceController {
 

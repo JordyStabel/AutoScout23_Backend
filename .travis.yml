@@ -2,3 +2,9 @@ language: java
 rvm:
 - 1.8
 - junit
+
+#deploy:
+#  provider: heroku
+#   api_key:
+#      secure: "8039b036-d82b-4049-a8a9-4b82f865aac5"
+#    app: autoscout23

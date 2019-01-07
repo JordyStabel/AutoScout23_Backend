@@ -5,10 +5,14 @@ import autoscoutbackend.models.Make;
 import autoscoutbackend.rest.handler.MakeHandler;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
+@CrossOrigin(origins = "https://autoscout23.herokuapp.com")
 @RestController
 public class MakeServiceResourceController {
 
@@ -32,5 +36,12 @@ public class MakeServiceResourceController {
     @CrossOrigin(origins = "http://localhost:3000")
     public void submitNewCar(@RequestBody Make make) {
         makeHandler.AddMake(make);
+    }
+
+    @RequestMapping(value = "/get-time-test")
+    public String getTimeMessage(){
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+        Date date = new Date();
+        return dateFormat.format(date + " This is a test...");
     }
 }
