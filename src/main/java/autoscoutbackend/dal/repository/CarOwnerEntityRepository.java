@@ -21,4 +21,6 @@ public class CarOwnerEntityRepository extends AbstractRepository<CarOwner, Integ
         session.close();
         return owner;
     }
+
+
 }

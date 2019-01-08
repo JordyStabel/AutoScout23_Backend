@@ -1,4 +1,2 @@
 
-‹squid:S2637"j"dateCreated" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(¿é†™ûÿÿÿÿ8Ÿ¯©-
-Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ÿ¯©-
-Xsquid:UselessImportCheck"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8Ÿ¯©-
+squid:S2637$"j"dateCreated" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(¿é†™ûÿÿÿÿ8Áüˆû‚-

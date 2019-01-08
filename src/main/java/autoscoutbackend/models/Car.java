@@ -3,6 +3,9 @@ package autoscoutbackend.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Car")
@@ -16,6 +19,9 @@ public class Car {
     @JoinTable(name = "Car_CarOwner")
     private CarOwner carOwner;
 
+    @ManyToMany(mappedBy = "favoriteCars", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<CarOwner> carOwners = new LinkedHashSet<>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int carID;
@@ -28,6 +34,9 @@ public class Car {
 
     @NotNull
     private int mileage;
+
+    @NotNull
+    private String description;
 
     @NotNull
     private int price;
@@ -54,17 +63,19 @@ public class Car {
 
     }
 
-    public Car(String make, String model, int mileage, int price, String image) {
+    public Car(String make, String model, String description, int mileage, int price, String image) {
         this.make = make;
         this.model = model;
+        this.description = description;
         this.mileage = mileage;
         this.price = price;
         this.image = image;
     }
 
-    public Car(String make, String model, int mileage, int price) {
+    public Car(String make, String model, String description, int mileage, int price) {
         this.make = make;
         this.model = model;
+        this.description = description;
         this.mileage = mileage;
         this.price = price;
     }
@@ -129,6 +140,14 @@ public class Car {
         this.image = image;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Make getCarMake() {
         return carMake;
     }
@@ -145,17 +164,29 @@ public class Car {
         this.carOwner = carOwner;
     }
 
+    public Set<CarOwner> getCarOwners() {
+        return carOwners;
+    }
+
+    public void setCarOwners(Set<CarOwner> carOwners) {
+        this.carOwners = carOwners;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
-                "id=" + carID +
+                "carMake=" + carMake +
+                ", carOwner=" + carOwner +
+                ", carOwners=" + carOwners +
+                ", carID=" + carID +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", mileage=" + mileage +
+                ", description='" + description + '\'' +
                 ", price=" + price +
                 ", image='" + image + '\'' +
-                ", created=" + date_created +
-                ", updated=" + date_updated +
+                ", date_created=" + date_created +
+                ", date_updated=" + date_updated +
                 '}';
     }
 

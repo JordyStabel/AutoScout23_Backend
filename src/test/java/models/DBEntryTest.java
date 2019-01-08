@@ -21,7 +21,7 @@ public class DBEntryTest {
     public void setUp() {
 
         make = new Make("BMW");
-        car = new Car("BMW", "M5 E92", 25600, 32000, "https://hips.hearstapps.com/hmg-prod/images/2018-bmw-m2-competition-99gallery-1526572314.jpg");
+        car = new Car("BMW", "M5 E92", "Fast & fun car. Not too reliable.", 25600, 32000, "https://hips.hearstapps.com/hmg-prod/images/2018-bmw-m2-competition-99gallery-1526572314.jpg");
         car.setCarMake(make);
     }
 

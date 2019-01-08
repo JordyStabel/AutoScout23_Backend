@@ -1,11 +1,12 @@
 
+msquid:S00100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8éóÇŸ-
+msquid:S00100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ §ƒ8¸ÊÖĞ‚-
+Usquid:S1135&"2Complete the task associated to this TODO comment.(Õò™ûÿÿÿÿ8éóÇŸ-
+rsquid:S00100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä¼’úÿÿÿÿ8Ú¨ÚĞ‚-
+Vsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÇşÍö‚-
+bsquid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8éóÇŸ-
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8éóÇŸ-
+msquid:S00100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8éóÇŸ-
+msquid:S00100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œİÁ¦8éóÇŸ-
 [squid:UselessImportCheck
 "0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8éóÇŸ-
-msquid:S00100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î‘‡‹8éóÇŸ-
-rsquid:S00100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÃşˆüÿÿÿÿ8¸ÊÖĞ‚-
-rsquid:S00100I"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¸¹òşÿÿÿÿ8Ú¨ÚĞ‚-
-Usquid:S1135%"2Complete the task associated to this TODO comment.(Õò™ûÿÿÿÿ8éóÇŸ-
-bsquid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8éóÇŸ-
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«·³¨øÿÿÿÿ8éóÇŸ-
-msquid:S00100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œİÁ¦8éóÇŸ-
-msquid:S00100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤£îÙ8éóÇŸ-

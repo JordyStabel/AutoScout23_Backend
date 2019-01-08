@@ -1,3 +1,3 @@
 
-`squid:UselessImportCheck"8Remove this unused import 'autoscoutbackend.models.Car'.(Ëã•L8ıÕúÿ€-
-Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ıÕúÿ€-
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ıÕúÿ€-
+bsquid:UselessImportCheck"8Remove this unused import 'autoscoutbackend.models.Car'.(Ëã•L8ıÕúÿ€-

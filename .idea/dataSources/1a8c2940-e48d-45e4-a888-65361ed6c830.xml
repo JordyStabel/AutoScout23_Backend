@@ -14,7 +14,7 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2019-01-07.11:24:21.217</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2019-01-08.22:29:31.433</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -55,237 +55,297 @@
       <ObjectId>16393</ObjectId>
     </schema>
     <table id="17" parent="4" name="Car">
-      <ObjectId>1853249657</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.360</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.657</ModifiedTimestamp>
+      <ObjectId>1259867555</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.703</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.937</ModifiedTimestamp>
     </table>
     <table id="18" parent="4" name="CarOwner">
-      <ObjectId>1949249999</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.463</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.543</ModifiedTimestamp>
+      <ObjectId>1355867897</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.780</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.957</ModifiedTimestamp>
     </table>
-    <table id="19" parent="4" name="Car_CarOwner">
-      <ObjectId>1885249771</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.397</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.577</ModifiedTimestamp>
+    <table id="19" parent="4" name="CarOwner_FavoriteCar">
+      <ObjectId>1387868011</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.803</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.957</ModifiedTimestamp>
     </table>
-    <table id="20" parent="4" name="Car_Make">
-      <ObjectId>1917249885</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.430</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.653</ModifiedTimestamp>
+    <table id="20" parent="4" name="Car_CarOwner">
+      <ObjectId>1291867669</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.730</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.870</ModifiedTimestamp>
     </table>
-    <table id="21" parent="4" name="Make">
-      <ObjectId>1981250113</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.500</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.610</ModifiedTimestamp>
+    <table id="21" parent="4" name="Car_Make">
+      <ObjectId>1323867783</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.753</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.917</ModifiedTimestamp>
     </table>
-    <column id="22" parent="17" name="carID">
+    <table id="22" parent="4" name="Make">
+      <ObjectId>1419868125</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.827</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.893</ModifiedTimestamp>
+    </table>
+    <column id="23" parent="17" name="carID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="17" name="date_created">
+    <column id="24" parent="17" name="date_created">
       <Position>2</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="17" name="date_updated">
+    <column id="25" parent="17" name="date_updated">
       <Position>3</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="25" parent="17" name="image">
+    <column id="26" parent="17" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="17" name="make">
+    <column id="27" parent="17" name="image">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="17" name="mileage">
+    <column id="28" parent="17" name="make">
       <Position>6</Position>
-      <DataType>int|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="28" parent="17" name="model">
-      <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="17" name="price">
-      <Position>8</Position>
+    <column id="29" parent="17" name="mileage">
+      <Position>7</Position>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="30" parent="17" name="PK__Car__1436F094273CBD04">
+    <column id="30" parent="17" name="model">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="17" name="price">
+      <Position>9</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="17" name="PK__Car__1436F094FE806D84">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>carID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="17" name="PK__Car__1436F094273CBD04">
-      <ObjectId>1869249714</ObjectId>
+    <key id="33" parent="17" name="PK__Car__1436F094FE806D84">
+      <ObjectId>1275867612</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-07.09:26:49.360</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.360</ModifiedTimestamp>
+      <CreatedTimestamp>2019-01-08.22:25:00.703</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.703</ModifiedTimestamp>
       <ColNames>carID</ColNames>
-      <UnderlyingIndexName>PK__Car__1436F094273CBD04</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Car__1436F094FE806D84</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="18" name="carowner_id">
+    <column id="34" parent="18" name="carowner_id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="18" name="dateCreated">
+    <column id="35" parent="18" name="dateCreated">
       <Position>2</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="18" name="userName">
+    <column id="36" parent="18" name="userName">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="35" parent="18" name="PK__CarOwner__77507F3742CADA05">
+    <index id="37" parent="18" name="PK__CarOwner__77507F37623E8F37">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>carowner_id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="36" parent="18" name="PK__CarOwner__77507F3742CADA05">
-      <ObjectId>1965250056</ObjectId>
+    <key id="38" parent="18" name="PK__CarOwner__77507F37623E8F37">
+      <ObjectId>1371867954</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-07.09:26:49.463</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.463</ModifiedTimestamp>
+      <CreatedTimestamp>2019-01-08.22:25:00.780</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.780</ModifiedTimestamp>
       <ColNames>carowner_id</ColNames>
-      <UnderlyingIndexName>PK__CarOwner__77507F3742CADA05</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__CarOwner__77507F37623E8F37</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="37" parent="19" name="carOwner_carowner_id">
+    <column id="39" parent="19" name="carowner_id">
       <Position>1</Position>
       <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="19" name="carID">
+    <column id="40" parent="19" name="carID">
       <Position>2</Position>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="39" parent="19" name="PK__Car_CarO__1436F094551A59DD">
+    <index id="41" parent="19" name="PK__CarOwner__2613103E0C90FAD9">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>carID</ColNames>
+      <ColNames>carowner_id
+carID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="40" parent="19" name="PK__Car_CarO__1436F094551A59DD">
-      <ObjectId>1901249828</ObjectId>
+    <key id="42" parent="19" name="PK__CarOwner__2613103E0C90FAD9">
+      <ObjectId>1403868068</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-07.09:26:49.397</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.397</ModifiedTimestamp>
-      <ColNames>carID</ColNames>
-      <UnderlyingIndexName>PK__Car_CarO__1436F094551A59DD</UnderlyingIndexName>
+      <CreatedTimestamp>2019-01-08.22:25:00.803</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.803</ModifiedTimestamp>
+      <ColNames>carowner_id
+carID</ColNames>
+      <UnderlyingIndexName>PK__CarOwner__2613103E0C90FAD9</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="41" parent="19" name="FKmhu57km7lyxerb4gws5gn74l5">
-      <ObjectId>2013250227</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.543</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.543</ModifiedTimestamp>
-      <ColNames>carOwner_carowner_id</ColNames>
-      <RefTableId>1949249999</RefTableId>
+    <foreign-key id="43" parent="19" name="FKbg1t2cq5ykfhbov3woro5uga0">
+      <ObjectId>1531868524</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.957</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.957</ModifiedTimestamp>
+      <ColNames>carowner_id</ColNames>
+      <RefTableId>1355867897</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
       <RefTableName>CarOwner</RefTableName>
-      <RefKeyName>PK__CarOwner__77507F3742CADA05</RefKeyName>
+      <RefKeyName>PK__CarOwner__77507F37623E8F37</RefKeyName>
       <RefColNames>carowner_id</RefColNames>
     </foreign-key>
-    <foreign-key id="42" parent="19" name="FKbxjsbtl62soue9xj8l0yf245a">
-      <ObjectId>2029250284</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.577</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.577</ModifiedTimestamp>
+    <foreign-key id="44" parent="19" name="FKr3b0me2umxbco0blqm2f55xb">
+      <ObjectId>1515868467</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.937</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.937</ModifiedTimestamp>
       <ColNames>carID</ColNames>
-      <RefTableId>1853249657</RefTableId>
+      <RefTableId>1259867555</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
       <RefTableName>Car</RefTableName>
-      <RefKeyName>PK__Car__1436F094273CBD04</RefKeyName>
+      <RefKeyName>PK__Car__1436F094FE806D84</RefKeyName>
       <RefColNames>carID</RefColNames>
     </foreign-key>
-    <column id="43" parent="20" name="carMake_make_id">
+    <column id="45" parent="20" name="carOwner_carowner_id">
       <Position>1</Position>
       <DataType>int|0</DataType>
     </column>
-    <column id="44" parent="20" name="carID">
+    <column id="46" parent="20" name="carID">
       <Position>2</Position>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="45" parent="20" name="PK__Car_Make__1436F0945CF89C13">
+    <index id="47" parent="20" name="PK__Car_CarO__1436F0948D33B481">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>carID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="46" parent="20" name="PK__Car_Make__1436F0945CF89C13">
-      <ObjectId>1933249942</ObjectId>
+    <key id="48" parent="20" name="PK__Car_CarO__1436F0948D33B481">
+      <ObjectId>1307867726</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-07.09:26:49.430</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.430</ModifiedTimestamp>
+      <CreatedTimestamp>2019-01-08.22:25:00.730</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.730</ModifiedTimestamp>
       <ColNames>carID</ColNames>
-      <UnderlyingIndexName>PK__Car_Make__1436F0945CF89C13</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Car_CarO__1436F0948D33B481</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="47" parent="20" name="FKknd3y4b8e9olkotgl3pyetrvp">
-      <ObjectId>2045250341</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.610</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.610</ModifiedTimestamp>
-      <ColNames>carMake_make_id</ColNames>
-      <RefTableId>1981250113</RefTableId>
+    <foreign-key id="49" parent="20" name="FKmhu57km7lyxerb4gws5gn74l5">
+      <ObjectId>1451868239</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.850</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.850</ModifiedTimestamp>
+      <ColNames>carOwner_carowner_id</ColNames>
+      <RefTableId>1355867897</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
-      <RefTableName>Make</RefTableName>
-      <RefKeyName>PK__Make__335C91D8A84B334A</RefKeyName>
-      <RefColNames>make_id</RefColNames>
+      <RefTableName>CarOwner</RefTableName>
+      <RefKeyName>PK__CarOwner__77507F37623E8F37</RefKeyName>
+      <RefColNames>carowner_id</RefColNames>
     </foreign-key>
-    <foreign-key id="48" parent="20" name="FKkqobhx66do60mxi4mjijw73tn">
-      <ObjectId>2061250398</ObjectId>
-      <CreatedTimestamp>2019-01-07.09:26:49.653</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.653</ModifiedTimestamp>
+    <foreign-key id="50" parent="20" name="FKbxjsbtl62soue9xj8l0yf245a">
+      <ObjectId>1467868296</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.870</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.870</ModifiedTimestamp>
       <ColNames>carID</ColNames>
-      <RefTableId>1853249657</RefTableId>
+      <RefTableId>1259867555</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
       <RefTableName>Car</RefTableName>
-      <RefKeyName>PK__Car__1436F094273CBD04</RefKeyName>
+      <RefKeyName>PK__Car__1436F094FE806D84</RefKeyName>
       <RefColNames>carID</RefColNames>
     </foreign-key>
-    <column id="49" parent="21" name="make_id">
+    <column id="51" parent="21" name="carMake_make_id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="52" parent="21" name="carID">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="53" parent="21" name="PK__Car_Make__1436F094EBD05B4F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>carID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="21" name="PK__Car_Make__1436F094EBD05B4F">
+      <ObjectId>1339867840</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2019-01-08.22:25:00.753</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.753</ModifiedTimestamp>
+      <ColNames>carID</ColNames>
+      <UnderlyingIndexName>PK__Car_Make__1436F094EBD05B4F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="21" name="FKknd3y4b8e9olkotgl3pyetrvp">
+      <ObjectId>1483868353</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.893</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.893</ModifiedTimestamp>
+      <ColNames>carMake_make_id</ColNames>
+      <RefTableId>1419868125</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Make</RefTableName>
+      <RefKeyName>PK__Make__335C91D89D329738</RefKeyName>
+      <RefColNames>make_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="56" parent="21" name="FKkqobhx66do60mxi4mjijw73tn">
+      <ObjectId>1499868410</ObjectId>
+      <CreatedTimestamp>2019-01-08.22:25:00.917</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.917</ModifiedTimestamp>
+      <ColNames>carID</ColNames>
+      <RefTableId>1259867555</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Car</RefTableName>
+      <RefKeyName>PK__Car__1436F094FE806D84</RefKeyName>
+      <RefColNames>carID</RefColNames>
+    </foreign-key>
+    <column id="57" parent="22" name="make_id">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="21" name="make">
+    <column id="58" parent="22" name="make">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="51" parent="21" name="PK__Make__335C91D8A84B334A">
+    <index id="59" parent="22" name="PK__Make__335C91D89D329738">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>make_id</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="52" parent="21" name="PK__Make__335C91D8A84B334A">
-      <ObjectId>1997250170</ObjectId>
+    <key id="60" parent="22" name="PK__Make__335C91D89D329738">
+      <ObjectId>1435868182</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2019-01-07.09:26:49.503</CreatedTimestamp>
-      <ModifiedTimestamp>2019-01-07.09:26:49.503</ModifiedTimestamp>
+      <CreatedTimestamp>2019-01-08.22:25:00.827</CreatedTimestamp>
+      <ModifiedTimestamp>2019-01-08.22:25:00.827</ModifiedTimestamp>
       <ColNames>make_id</ColNames>
-      <UnderlyingIndexName>PK__Make__335C91D8A84B334A</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Make__335C91D89D329738</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
   </database-model>

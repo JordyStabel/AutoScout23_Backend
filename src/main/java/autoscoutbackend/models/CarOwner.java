@@ -2,9 +2,7 @@ package autoscoutbackend.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "CarOwner")
@@ -19,6 +17,12 @@ public class CarOwner {
 
     @NotNull
     private Date dateCreated;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "CarOwner_FavoriteCar",
+            joinColumns = { @JoinColumn(name = "carowner_id") },
+            inverseJoinColumns = { @JoinColumn(name = "carID") })
+    private Set<Car> favoriteCars = new LinkedHashSet<>();
 
     @PrePersist
     protected void onCreate() {
@@ -39,6 +43,14 @@ public class CarOwner {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Set<Car> getFavoriteCars() {
+        return favoriteCars;
+    }
+
+    public void setFavoriteCars(Set<Car> favoriteCars) {
+        this.favoriteCars = favoriteCars;
     }
 
     public String getUserName() {
@@ -63,6 +75,7 @@ public class CarOwner {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", dateCreated=" + dateCreated +
+                ", favoriteCars=" + favoriteCars +
                 '}';
     }
 }

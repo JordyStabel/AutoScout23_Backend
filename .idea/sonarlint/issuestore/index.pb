@@ -57,3 +57,7 @@ p
 -src/test/java/models/CarOwnerDBEntryTest.java,a\2\a244858ca2841dea58b93e19d5b02afdfc65e0b8
 >
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
+b
+2src/test/java/autoscoutbackend/models/CarTest.java,7\5\7509327e1d5f5bfbd9be684f7e1ff18cc2c1accd
+ƒ
+Ssrc/main/java/autoscoutbackend/rest/services/CarOwnerServiceResourceController.java,b\d\bd130377727ac2ca5b52fb2ad092539ba5c701ff

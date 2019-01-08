@@ -23,7 +23,7 @@ public class RetrieveCreatedCar {
 
             // Create 3 new Car object
             System.out.println("Create new cars");
-            Car newCar1 = new Car("Seat", "Ibiza", 135900, 4500, "https://prod.pictures.autoscout24.net/listing-images/f17ca69a-b0cd-4f88-9196-c9f3c9f81b74_0b5c8001-2706-478b-8d55-54c1c33a7ffc.jpg/640x480.jpg");
+            Car newCar1 = new Car("Seat", "Ibiza", "Very nice car, great build quality too...",135900, 4500, "https://prod.pictures.autoscout24.net/listing-images/f17ca69a-b0cd-4f88-9196-c9f3c9f81b74_0b5c8001-2706-478b-8d55-54c1c33a7ffc.jpg/640x480.jpg");
 
             // Start a transaction
             System.out.println("Starting transaction");
