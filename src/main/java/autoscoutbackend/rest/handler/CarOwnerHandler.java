@@ -38,12 +38,13 @@ public class CarOwnerHandler {
             carOwnerEntityRepository.save(owner);
         }
 
-        Set<Car> favoriteCars = owner.getFavoriteCars();
         Car favoriteCar = carEntityRepository.findOne(carID);
-        favoriteCars.add(favoriteCar);
+        Set<CarOwner> favoriteCars = favoriteCar.getCarOwners();
 
-        owner.setFavoriteCars(favoriteCars);
-        carOwnerEntityRepository.save(owner);
+        favoriteCars.add(owner);
+
+        favoriteCar.setCarOwners(favoriteCars);
+        carEntityRepository.save(favoriteCar);
     }
 
     public void RemoveCarOwnerById (int id) {

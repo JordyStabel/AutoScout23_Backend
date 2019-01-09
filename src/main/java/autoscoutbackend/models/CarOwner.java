@@ -18,11 +18,14 @@ public class CarOwner {
     @NotNull
     private Date dateCreated;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "CarOwner_FavoriteCar",
-            joinColumns = { @JoinColumn(name = "carowner_id") },
-            inverseJoinColumns = { @JoinColumn(name = "carID") })
-    private Set<Car> favoriteCars = new LinkedHashSet<>();
+//    @ManyToMany(cascade = {CascadeType.ALL, CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
+//    private List<Car> favoriteCars;
+
+//    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+//    @JoinTable(name = "CarOwner_FavoriteCar",
+//            joinColumns = @JoinColumn(name = "carowner_id"),
+//            inverseJoinColumns = @JoinColumn(name = "carID"))
+//    private Set<Car> favoriteCars = new HashSet<>();
 
     @PrePersist
     protected void onCreate() {
@@ -45,13 +48,13 @@ public class CarOwner {
         this.id = id;
     }
 
-    public Set<Car> getFavoriteCars() {
-        return favoriteCars;
-    }
-
-    public void setFavoriteCars(Set<Car> favoriteCars) {
-        this.favoriteCars = favoriteCars;
-    }
+//    public List<Car> getFavoriteCars() {
+//        return favoriteCars;
+//    }
+//
+//    public void setFavoriteCars(List<Car> favoriteCars) {
+//        this.favoriteCars = favoriteCars;
+//    }
 
     public String getUserName() {
         return userName;
@@ -75,7 +78,7 @@ public class CarOwner {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", dateCreated=" + dateCreated +
-                ", favoriteCars=" + favoriteCars +
+                //", favoriteCars=" + favoriteCars +
                 '}';
     }
 }
