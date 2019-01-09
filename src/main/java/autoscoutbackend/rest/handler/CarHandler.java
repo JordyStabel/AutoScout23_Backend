@@ -19,6 +19,9 @@ public class CarHandler {
     private CarOwnerEntityRepository carOwnerEntityRepository = new CarOwnerEntityRepository();
 
     public void SubmitCar(Car car) {
+
+        System.out.println(car);
+
         Make make;
         try {
             make = makeEntityRepository.getByName(car.getMake());
@@ -29,9 +32,9 @@ public class CarHandler {
 
         CarOwner owner;
         try {
-            owner = carOwnerEntityRepository.getByName("Jordy");
+            owner = carOwnerEntityRepository.getByName(car.getCarOwner().getUserName());
         } catch (Exception e) {
-            owner = new CarOwner("Jordy");
+            owner = new CarOwner(car.getCarOwner().getUserName());
             carOwnerEntityRepository.save(owner);
         }
 
