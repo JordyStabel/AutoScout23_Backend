@@ -61,3 +61,5 @@ b
 2src/test/java/autoscoutbackend/models/CarTest.java,7\5\7509327e1d5f5bfbd9be684f7e1ff18cc2c1accd
 ƒ
 Ssrc/main/java/autoscoutbackend/rest/services/CarOwnerServiceResourceController.java,b\d\bd130377727ac2ca5b52fb2ad092539ba5c701ff
+q
+Asrc/main/java/autoscoutbackend/models/FavoriteCarPairContext.java,9\b\9bf47c13b221f4c8d874fe85595ef959c92c5057

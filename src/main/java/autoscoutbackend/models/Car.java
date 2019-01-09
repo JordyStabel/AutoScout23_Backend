@@ -21,7 +21,7 @@ public class Car {
 //    @ManyToMany(cascade = {CascadeType.ALL, CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
 //    private List<CarOwner> carOwners = new ArrayList<>();
 
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER) //(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.ALL, CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER) //(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "CarOwner_FavoriteCar",
             joinColumns = @JoinColumn(name = "carID"),
             inverseJoinColumns = @JoinColumn(name = "carowner_id"))
