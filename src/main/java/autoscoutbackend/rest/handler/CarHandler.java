@@ -38,7 +38,6 @@ public class CarHandler {
             carOwnerEntityRepository.save(owner);
         }
 
-        //TODO: Fetch an actual car-owner from front-end
         carOwnerEntityRepository.save(owner);
         car.setCarOwner(owner);
         car.setCarMake(make);
