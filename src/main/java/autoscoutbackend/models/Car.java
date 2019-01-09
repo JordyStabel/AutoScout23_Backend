@@ -1,7 +1,5 @@
 package autoscoutbackend.models;
 
-import javafx.collections.transformation.SortedList;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.*;
