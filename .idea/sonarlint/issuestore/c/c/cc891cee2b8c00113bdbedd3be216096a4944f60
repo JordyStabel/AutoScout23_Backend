@@ -1,11 +1,10 @@
 
-nsquid:S00100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ĞÛı8Æ›‰û‚-
-tsquid:UselessImportCheck"IRemove this unused import 'javafx.collections.transformation.SortedList'.( ‡ä¢8‰ÒÚ’ƒ-
-‚squid:S2637P"d"image" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(¬ÊŒÎ8Æ›‰û‚-
-nsquid:S00100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷…œ8Æ›‰û‚-
-ssquid:S00100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¯³áÿÿÿÿÿ8Æ›‰û‚-
-ssquid:S00100ˆ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õì™æúÿÿÿÿ8Æ›‰û‚-
-‰squid:S2637G"k"date_created" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(çÑî8Æ›‰û‚-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿÙ£«úÿÿÿÿ8¥‘€“ƒ-
-vsquid:S00116?"WRename this field "date_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üº¢Ä8Æ›‰û‚-
-vsquid:S00116A"WRename this field "date_updated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î„§í8Æ›‰û‚-
+ssquid:S00100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õì™æúÿÿÿÿ8Æ›‰û‚-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿÙ£«úÿÿÿÿ8¥‘€“ƒ-
+msquid:S00100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ĞÛı8Æ›‰û‚-
+nsquid:S00100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á÷…œ8Æ›‰û‚-
+‰squid:S2637E"k"date_created" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(çÑî8Æ›‰û‚-
+vsquid:S00116?"WRename this field "date_updated" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î„§í8Æ›‰û‚-
+vsquid:S00116="WRename this field "date_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üº¢Ä8Æ›‰û‚-
+‚squid:S2637N"d"image" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(¬ÊŒÎ8Æ›‰û‚-
+ssquid:S00100Ä"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¯³áÿÿÿÿÿ8Æ›‰û‚-
