@@ -80,4 +80,8 @@ public class CarHandler {
     public void DeleteCarById(int id) {
         carEntityRepository.delete(id);
     }
+
+    public Car GetLatestCar() {
+        return carEntityRepository.getLatestCar();
+    }
 }

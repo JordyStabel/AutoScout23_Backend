@@ -31,6 +31,11 @@ public class CarServiceResourceController {
         return jsonList;
     }
 
+    @GetMapping("/get-latest-car")
+    public Car getLatestCar() {
+        return carHandler.GetLatestCar();
+    }
+
     @RequestMapping(value = "/get-time")
     public String getTimeMessage(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");

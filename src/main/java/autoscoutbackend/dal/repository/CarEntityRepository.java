@@ -20,4 +20,12 @@ public class CarEntityRepository extends AbstractRepository<Car, Integer> {
         session.close();
         return resultList;
     }
+
+    public Car getLatestCar(){
+        Session session = currentSession();
+        Query query = session.createQuery("SELECT e FROM Car e ORDER BY e.date_created desc");
+        Car result = (Car) query.getSingleResult();
+        session.close();
+        return result;
+    }
 }
