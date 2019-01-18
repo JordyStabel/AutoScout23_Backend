@@ -33,7 +33,7 @@ public class CarServiceResourceController {
 
     @GetMapping("/get-latest-car")
     public Car getLatestCar() {
-        return carHandler.GetLatestCar();
+        return carHandler.GetLatestCar().get(0);
     }
 
     @RequestMapping(value = "/get-time")

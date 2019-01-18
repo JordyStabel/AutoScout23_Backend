@@ -81,7 +81,7 @@ public class CarHandler {
         carEntityRepository.delete(id);
     }
 
-    public Car GetLatestCar() {
+    public List<Car> GetLatestCar() {
         return carEntityRepository.getLatestCar();
     }
 }
